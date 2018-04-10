@@ -1,0 +1,35 @@
+string sqlUpdateText = "UPDATE Suvirintojai SET vardas=@Vardas, pazymNr=@Pazymejimas, padalinysId=@padalinysId, isActive=@Aktyvus WHERE id=@ID;";
+            DbCommand updateCommand = Program.dpf.CreateCommand();
+            updateCommand.CommandText = sqlUpdateText;
+            
+            DbParameter param0 = Program.dpf.CreateParameter();
+            param0.ParameterName = "@Vardas";
+            param0.SourceColumn = "Vardas";
+            param0.DbType = DbType.String;
+            updateCommand.Parameters.Add(param0);
+
+            DbParameter param1 = Program.dpf.CreateParameter();
+            param1.ParameterName = "@Pazymejimas";
+            param1.SourceColumn = "Paþymëjimas";
+            param1.DbType = DbType.String;
+            updateCommand.Parameters.Add(param1);
+
+            DbParameter param2 = Program.dpf.CreateParameter();
+            param2.ParameterName = "@padalinysId";
+            param2.SourceColumn = "padalinysId";
+            param2.DbType = DbType.Int32;
+            updateCommand.Parameters.Add(param2);
+            
+            DbParameter param3 = Program.dpf.CreateParameter();
+            param3.ParameterName = "@Aktyvus";
+            param3.SourceColumn = "Aktyvus";
+            param3.DbType = DbType.Boolean;
+            updateCommand.Parameters.Add(param3);
+            
+            DbParameter param4 = Program.dpf.CreateParameter();
+            param4.ParameterName = "@ID";
+            param4.SourceColumn = "ID";
+            param4.DbType = DbType.Int32;
+            updateCommand.Parameters.Add(param4);
+
+            dAdapter.UpdateCommand = updateCommand;

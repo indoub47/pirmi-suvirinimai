@@ -1,0 +1,95 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SuvirinimaiApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Suvirinimai.mdb&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Suvirinimai.mdb</Value>
+    </Setting>
+    <Setting Name="requestBoxLocationX" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="requestBoxLocationY" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">39</Value>
+    </Setting>
+    <Setting Name="requestStringTextBoxSizeX" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">310</Value>
+    </Setting>
+    <Setting Name="requestStringTextBoxSizeY" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="requestComboBoxSizeX" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">310</Value>
+    </Setting>
+    <Setting Name="requestComboBoxSizeY" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">21</Value>
+    </Setting>
+    <Setting Name="requestIntTextBoxSizeX" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="requestIntTextBoxSizeY" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="MaxFilterParts" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="OutputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FilterIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AtaskaitaTemplateFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ataskaita_template.xsl</Value>
+    </Setting>
+    <Setting Name="DefaultOutputFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Suvirinimo aktų suvestinė</Value>
+    </Setting>
+    <Setting Name="DefaultImportFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AktasDotTemplateFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">K79.dot</Value>
+    </Setting>
+    <Setting Name="AktasOutputFileNamePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SA </Value>
+    </Setting>
+    <Setting Name="RowsExportFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">suvirinimai</Value>
+    </Setting>
+    <Setting Name="RowsExportFileDialogFilerIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DbProviderName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">System.Data.OleDb</Value>
+    </Setting>
+    <Setting Name="InfraDataFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">lgif.xml</Value>
+    </Setting>
+    <Setting Name="SelectInfraDataFileDialogTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Pasirinkite infrastruktūros duomenų failą (*.xml)</Value>
+    </Setting>
+    <Setting Name="EtcDirName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">etc</Value>
+    </Setting>
+    <Setting Name="SelectDotTemplateFileDialogTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Pasirinkite MS Word šablono failą (*.dot)</Value>
+    </Setting>
+    <Setting Name="DotTemplateFileNotChosenError" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Nenurodytas tinkamas šablono failas. Jis yra būtinas.</Value>
+    </Setting>
+    <Setting Name="InfraDataFileNotChosenError" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Nenurodytas tinkamas infrastruktūros duomenų failas. Jis yra būtinas.</Value>
+    </Setting>
+    <Setting Name="RowsCheckResultFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Eilučių patikrinimo rezultatas</Value>
+    </Setting>
+    <Setting Name="RowsCheckOutputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

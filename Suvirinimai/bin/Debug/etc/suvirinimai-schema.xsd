@@ -1,0 +1,119 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="DocumentElement" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Aktai">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="id" type="dbid" minOccurs="0" />
+              <xs:element name="aktas_padalinysId" type="dbid" />
+              <xs:element name="aktas_Nr" type="xs:string" />
+              <xs:element name="aktas_data" type="xs:dateTime" />
+              <xs:element name="aktas_trukumai" type="xs:string" />
+              <xs:element name="begis_tipasId" type="dbid" />
+              <xs:element name="begis_protarpisMm" type="protarpis" />
+              <xs:element name="k11" type="kodas" />
+              <xs:element name="k12" type="kodas" />
+              <xs:element name="k21" type="kodas" />
+              <xs:element name="k22" type="kodas" />
+              <xs:element name="k23" type="kodas" />
+              <xs:element name="k24" type="kodas" />
+              <xs:element name="k31" type="kodas" />
+              <xs:element name="k32" type="kodas" />
+              <xs:element name="k41" type="kodas" />
+              <xs:element name="k42" type="kodas" />
+              <xs:element name="k51" type="kodas" />
+              <xs:element name="medz_formaGamMetai" type="gam_metai" />
+              <xs:element name="medz_misinGamMetai" type="gam_metai" />
+              <xs:element name="medz_misinKodasId" type="dbid" />
+              <xs:element name="medz_misinPartNr" type="xs:string" />
+              <xs:element name="medz_misinPorcNr" type="xs:string" />
+              <xs:element name="salyg_arSausa" type="xs:boolean" />
+              <xs:element name="salyg_oroTemp" type="temperatura" />
+              <xs:element name="salyg_begioTemp" type="temperatura" />
+              <xs:element name="suvirint_padalinysId" type="dbid" />
+              <xs:element name="suvirint_suvirintojasId" type="dbid" />
+              <xs:element name="tikrin_operatoriusId" type="oper_kodas" />
+              <xs:element name="tikrin_defektoskopasId" type="dskop_kodas" />
+              <xs:element name="tikrin_nelygumaiVirsausMm" type="nelygumai" />
+              <xs:element name="tikrin_nelygumaiSonoMm" type="nelygumai" />
+              <xs:element name="sutvark_vadovasId" type="dbid" />
+              <xs:element name="sutvark_padalinysId" type="dbid" />
+              <xs:element name="tikrin_arDefektas" type="xs:boolean" />
+              <xs:element name="tikrin_defKodas" type="xs:string" />
+              <xs:element name="tikrin_sanduruCharakter" type="xs:string" />
+              <xs:element name="aktas_pasiraseKMId" type="dbid" />
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- suvirinimo vietos kodo skaitmuo -->
+  <xs:simpleType name="kodas">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="9"/>
+      <xs:totalDigits value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- duomenų bazės autogeneruojamas id -->
+  <xs:simpleType name="dbid">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- bėgių protarpio dydis, mm -->
+  <xs:simpleType name="protarpis">
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="100"/>
+      <xs:minInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- pagaminimo metai -->
+  <xs:simpleType name="gam_metai">
+    <xs:restriction base="xs:short">
+      <xs:maxInclusive value="2020"/>
+      <xs:minInclusive value="1998"/>
+      <xs:totalDigits value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- tempertūra, šiuo atveju bėgio ir oro -->
+  <xs:simpleType name="temperatura">
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="100"/>
+      <xs:minInclusive value="-100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- NBB operatoriaus kodas, tik IF4 -->
+  <xs:simpleType name="oper_kodas">
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="499"/>
+      <xs:minInclusive value="400"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- NBB defektoskopo kodas, tik IF4 -->
+  <xs:simpleType name="dskop_kodas">
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="899"/>
+      <xs:minInclusive value="800"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- suvirinimo nelygumų dydžiai -->
+  <xs:simpleType name="nelygumai">
+    <xs:restriction base="xs:float">
+      <xs:minInclusive value="-3.0"/>
+      <xs:maxInclusive value="3.0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

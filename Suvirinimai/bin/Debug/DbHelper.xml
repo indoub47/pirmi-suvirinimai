@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DbHelper</name>
+    </assembly>
+    <members>
+        <member name="T:ewal.Data.NamespaceDoc">
+            <summary>
+            Klasė jungimuisi prie duomenų bazės.
+            </summary>
+        </member>
+        <member name="T:ewal.Data.DbHelper">
+            <summary>
+            Pagalbinė klasė (wrapper) jungtis prie duomenų bazės ir atlikti dažniausiai pasitaikančias užklausas.
+            </summary>
+        </member>
+        <member name="M:ewal.Data.DbHelper.ConstructHelper(System.String,System.String)">
+            <summary>
+            Inicializuoja pagalbininką.
+            </summary>
+            <remarks>
+            <para>DbProvider name samples:<list type="table">
+            <item><term>mdb, MS Access 2003</term><description>"System.Data.OleDb"</description></item>
+            <item><term>SQLite 3</term><description>"Devart.Data.SQLite"</description></item>
+            <item><term>MySql</term><description>"MySql.Data.MySqlClient"</description></item>
+            </list></para>
+            <para>ConnectionString samples:<list type="table">
+            <item><term>mdb, MS Access 2003</term><description>"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\databasefilename.mdb"</description></item>
+            <item><term>SQLite 3</term><description>"Data Source=databasefilename;FailIfMissing=True;"</description></item>
+            <item><term>MySql</term><description>"Server=localhost;Database=test;Uid=test;Pwd=test;"</description></item>
+            </list></para>
+            </remarks>        ///
+            <param name="providerName">Invariant DbProvider name</param>
+            <param name="connString">ConnectionString</param>
+            <example><c>ewal.Data.DbHelper.constructHelper("Devart.Data.SQLite", "Data Source=db.sqlite;FailIfMissing=True;");</c></example>
+        </member>
+        <member name="M:ewal.Data.DbHelper.FillDataTable(System.String)">
+            <summary>
+            Atlieka SQL SELECT užklausą ir jos rezultatais užpildo <see cref="T:System.Data.DataTable"/>
+            </summary>
+            <param name="sqlSelectStatement">SQL SELECT sakinys</param>
+            <returns>SQL užklausos rezultatas <see cref="T:System.Data.DataTable"/></returns>
+            <exception cref="T:System.Data.Common.DbException">Išmeta <see cref="T:System.Data.Common.DbException"/>, kai dėl kokių nors priežasčių užklausa nepavyksta.</exception>
+            <example><c>System.Data.DataTable resultTable = ewal.Data.DbHelper.fillDataTable("SELECT * FROM MyTable WHERE id &gt; 10;");</c></example>
+        </member>
+        <member name="M:ewal.Data.DbHelper.FetchSingleValue(System.String)">
+            <summary>
+            Atlieka SQL SELECT užklausą, grąžina pirmąjį rezultatą.
+            </summary>
+            <param name="sqlSelectStatement">SQL SELECT sakinys</param>
+            <returns>SQL užklausos rezultatas <see cref="T:System.Object"/></returns>
+            <exception cref="T:System.Data.Common.DbException">Išmeta <see cref="T:System.Data.Common.DbException"/>, kai dėl kokių nors priežasčių užklausa nepavyksta.</exception>
+            <example><c>System.String resultString = ewal.Data.DbHelper.fetchSingleValue("SELECT name FROM MyTable WHERE id = 10;").ToString();</c></example>
+        </member>
+        <member name="M:ewal.Data.DbHelper.ExecuteNonQuery(System.String)">
+            <summary>
+            Atlieka SQL užklausą, negrąžinančią rezultato (UPDATE, DELETE, INSERT), grąžina <see cref="T:System.Int32"/>, rodantį, kiek duomenų bazės įrašų paveikta.
+            </summary>
+            <param name="sqlNonQueryStatement">SQL UPDATE, DELETE arba INSERT sakinys</param>
+            <returns><see cref="T:System.Int32"/>, rodantis, kiek duomenų bazės eilučių paveikta.</returns>
+            <exception cref="T:System.Data.Common.DbException">Išmeta <see cref="T:System.Data.Common.DbException"/>, kai dėl kokių nors priežasčių užklausa nepavyksta.</exception>
+            <example><c>int deletedRecordsCount = ewal.Data.DbHelper.fetchSingleValue("DELETE FROM MyTable WHERE id &lt; 10;");</c></example>
+        </member>
+        <member name="M:ewal.Data.DbHelper.FormatDateValue(System.Object)">
+            <summary>
+            <see cref="T:System.Object"/>, reiškiantį datą, verčia į <see cref="T:System.String"/>, tinkantį SQL užklausai.
+            </summary>
+            <param name="dateObject">Objektas, reiškiantis datą</param>
+            <returns><see cref="T:System.String"/> data, tinkanti SQL užklausai.</returns>
+            <example><c>
+            int deletedRecordsCount = ewal.Data.DbHelper.fetchSingleValue("DELETE FROM MyTable WHERE bornDate &lt; " + ewal.Data.DbHelper.formatDateValue(dateTimeObj) + ";");
+            </c></example>
+        </member>
+        <member name="M:ewal.Data.DbHelper.Escape(System.String)">
+            <summary>
+            Escapina viengubas (') ir dvigubas (") kabutes sql užklausos parametre.
+            </summary>
+            <param name="text">SQL-nesaugus <see cref="T:System.String"/> parametras</param>
+            <returns>SQL-saugus <see cref="T:System.String"/></returns>
+        </member>
+        <member name="P:ewal.Data.DbHelper.ConnectionString">
+            <summary>
+            Grąžina <see cref="T:System.String"/> ConnectionString
+            </summary>
+            <value>
+            ConnectionString
+            </value>
+        </member>
+        <member name="P:ewal.Data.DbHelper.DPFactory">
+            <summary>
+            Grąžina <see cref="T:System.Data.Common.DbProviderFactory"/> duomenų bazės tiekėjo gamyklą, ar kaip čia dabar pavadinti visą tą reikalą...
+            </summary>
+            <value>
+            DbProviderFactory
+            </value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Msg</name>
+    </assembly>
+    <members>
+        <member name="T:ewal.Msg.NamespaceDoc">
+            <summary>
+            Palengvinti <see cref="T:System.Windows.Forms.MessageBox"/> langai.
+            </summary>
+        </member>
+        <member name="T:ewal.Msg.Msg">
+            <summary>
+            <c>static</c> klasė pranešimams ir dialogo box'ams.
+            </summary>
+            <remarks>
+            Kai projekte yra daug pranešimų ir dialogo box'ų, ilgos <see cref="T:System.Windows.Forms.MessageBox"/> antraštės užteršia kodą.
+            Kad sutrumpinti <b>dažniausiai naudojamų</b> pranešimų antraštes, pasidariau šitą klasę.
+            </remarks>
+        </member>
+        <member name="M:ewal.Msg.Msg.ErrorMsg(System.String,System.String)">
+            <summary>
+            <i>Error</i> pranešimas su mygtuku "OK".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Klaida"</param>
+            <example><c>ewal.Msg.ErrorMsg("Jūs padarėte neatitaisomą klaidą!")</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.InformationMsg(System.String,System.String)">
+            <summary>
+            <i>Information</i> pranešimas su mygtuku "OK".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Informacija"</param>
+            <example><c>ewal.Msg.InformationMsg("Dėmesio, Jūs padarėte neatitaisomą klaidą!")</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.ExclamationMsg(System.String,System.String)">
+            <summary>
+            <i>Exclamation</i> pranešimas su mygtuku "OK".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Dėmesio!"</param>
+            <example><c>ewal.Msg.ExclamationMsg("Na va! Jūs padarėte neatitaisomą klaidą!")</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.WarningMsg(System.String,System.String)">
+            <summary>
+            <i>Warning</i> pranešimas su mygtuku "OK".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Įspėjimas"</param>
+            <example><c>ewal.Msg.WarningMsg("Atsargiai! Jūsų daroma klaida - neatitaisoma!")</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.YesNoCancelQuestion(System.String,System.String)">
+            <summary>
+            <i>Question</i> pranešimas su mygtukais "Yes", "No" ir "Cancel".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Klausimas"</param>
+            <returns><see cref="T:System.Windows.Forms.DialogResult"/> reikšmės: <c>DialogResult.Yes</c>, <c>DialogResult.No</c> arba <c>DialogResult.Cancel</c></returns>
+            <example><c>if (ewal.Msg.YesNoCancelQuestion("Ar išsaugoti dokumentą?") == DialogResult.No) ...</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.YesNoQuestion(System.String,System.String)">
+            <summary>
+            <i>Question</i> pranešimas su mygtukais "Yes" ir "No".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Klausimas"</param>
+            <returns><see cref="T:System.Windows.Forms.DialogResult"/> reikšmės: <c>DialogResult.Yes</c> arba <c>DialogResult.No</c></returns>
+            <example><c>if (ewal.Msg.YesNoQuestion("Ar ištrinti dokumentą?") == DialogResult.Yes) ...</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.OkCancelQuestion(System.String,System.String)">
+            <summary>
+            <i>Question</i> pranešimas su mygtukais "OK" ir "Cancel".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Klausimas"</param>
+            <returns><see cref="T:System.Windows.Forms.DialogResult"/> reikšmės: <c>DialogResult.OK</c> arba <c>DialogResult.Cancel</c></returns>
+            <example><c>if (ewal.Msg.YesNoQuestion("Ar tęsti?") == DialogResult.OK) ...</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.AbortRetryIgnoreQuestion(System.String,System.String)">
+            <summary>
+            <i>Question</i> pranešimas su mygtukais "Abort", "Retry" ir "Ignore".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Klausimas"</param>
+            <returns><see cref="T:System.Windows.Forms.DialogResult"/> reikšmės: <c>DialogResult.Abort</c>, <c>DialogResult.Retry</c> arba <c>DialogResult.Ignore</c></returns>
+            <example><c>if (ewal.Msg.AbortRetryIgnoreQuestion("Ar tęsti?") == DialogResult.Ignore) ...</c></example>
+        </member>
+        <member name="M:ewal.Msg.Msg.RetryCancelQuestion(System.String,System.String)">
+            <summary>
+            <i>Question</i> pranešimas su mygtukais "Retry" ir "Cancel".
+            </summary>
+            <param name="msg">Pranešimo tekstas</param>
+            <param name="title">Pranešimo box'o antraštė. Optional. Default reikšmė - "Klausimas"</param>
+            <returns><see cref="T:System.Windows.Forms.DialogResult"/> reikšmės: <c>DialogResult.Retry</c> arba <c>DialogResult.Cancel</c></returns>
+            <example><c>if (ewal.Msg.RetryCancelQuestion("Ar tęsti?") == DialogResult.Cancel) ...</c></example>
+        </member>
+    </members>
+</doc>

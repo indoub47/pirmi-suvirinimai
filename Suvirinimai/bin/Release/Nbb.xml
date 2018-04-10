@@ -1,0 +1,941 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nbb</name>
+    </assembly>
+    <members>
+        <member name="T:Nbb.NamespaceDoc">
+            <summary>
+            <para>
+            Tipų rinkinys, kurių paskirtis yra išnagrinėti bėgių defekto arba bėgių suvirinimo vietos kelyje kodą.
+            Kode užkoduota informacija gali būti išversta į natūralią kalbą.</para>
+            <para>Naudojami <c>public</c> tipai:
+            <list type="table">
+            <listheader><term>Tipas</term><description>Paskirtis</description></listheader>
+            <item><term><see cref="T:Nbb.VietosKodas"/></term><description>kodui įvesti</description></item>
+            <item><term><see cref="T:Nbb.LGIF"/></term><description><c>static</c>, turi duomenis apie geležinkelių infrastruktūrą</description></item>
+            <item><term><see cref="T:Nbb.VietosKodasParser"/></term><description><c>static</c>, atlieka pagrindinį darbą - nagrinėja kodą</description></item>
+            <item><term><see cref="T:Nbb.Vieta"/></term><description>kodo nagrinėjimo rezultatas</description></item>
+            <item>
+            <term>
+            <see cref="T:Nbb.Atstumas"/>, <see cref="T:Nbb.KelioElementas"/>, <see cref="T:Nbb.KelioKoordinate"/>, <see cref="T:Nbb.Linija"/>, <see cref="T:Nbb.Sandura"/>, <see cref="T:Nbb.Siule"/>, <see cref="T:Nbb.Stotis"/>, <see cref="T:Nbb.Tarpstotis"/>
+            </term>
+            <description>atskirų kelio elementų, kurie aprašo defekto arba suvirinimo vietą, duomenys</description>
+            </item>
+            <item>
+            <term><see cref="T:Nbb.InvalidKodasException"/>, <see cref="T:Nbb.InvalidDuomenysException"/>, <see cref="T:Nbb.FileIOFailureException"/></term>
+            <description>išimtinės situacijos (exceptions)</description></item>
+            </list></para>
+            </summary>
+        </member>
+        <member name="T:Nbb.KelioElementoTipas">
+            <summary>
+            Galimi geležinkelio kelio elementų tipai.
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.joks">
+            <summary>
+            Nenaudojamas
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.tarpstočio_lyginis_kelias">
+            <summary>
+            Tarpstočio lyginis kelias
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.tarpstočio_nelyginis_kelias">
+            <summary>
+            Tarpstočio nelyginis kelias
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.stoties_pagrindinis_kelias">
+            <summary>
+            Soties pagrindinis kelias
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.atvykimo_išvykimo_kelias">
+            <summary>
+            Atvykimo-išvykimo kelias
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.stoties_kelias">
+            <summary>
+            Stoties kelias
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.trumpasis_kelias_nuo_iešmo_kairėn">
+            <summary>
+            Trumpasis kelias už iešmo nuo kryžmės kairėn
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.trumpasis_kelias_nuo_iešmo_dešinėn">
+            <summary>
+            Trumpasis kelias už iešmo nuo kryžmės dešinėn arba prie rėminio bėgio sandūros
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.sankirta">
+            <summary>
+            Kelių sankirta
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioElementoTipas.iešmas">
+            <summary>
+            Iešmas
+            </summary>
+        </member>
+        <member name="T:Nbb.VietosKodas">
+            <summary>
+            Tipas <see cref="T:Nbb.VietosKodas"/> yra skirtas geležinkelio bėgių defekto arba suvirinimo kodui įvesti.
+            </summary>
+            <remarks>
+            <para>Tai - pagalbinis tipas, kuris leidžia įvesti kodą keliais skirtingais būdais,
+            ir kuris įvestą kodą paruošia modulio vidiniam naudojimui. Gali būti nesunkiai papildytas konstruktoriais,
+            kurie priimtų kodą kitais reikalingais pavidalais ir būdais.</para>
+            <para>
+            Geležinkelių bėgių defektų ir suvirinimo vietos aprašymui AB "Lietuvos geležinkeliai" naudoja specialų kodavimą. 
+            Kodo struktūra yra: xx.xxxx.xx.xx.x, kur x - skaitmuo. Pavyzdžiui, 17.1085.09.47.9 .</para>
+            </remarks>
+        </member>
+        <member name="M:Nbb.VietosKodas.#ctor(System.Data.DataRow)">
+            <summary>
+            Initializes a new instance of <see cref="T:Nbb.VietosKodas"/> type.
+            </summary>
+            <param name="row"><see cref="T:System.Data.DataRow"/>, consisting of 11 columns:
+            <list type="table">
+            <listheader><term>DataRow Column Name</term><description>Column Value's Position in Code</description></listheader>
+            <item><term>k11</term><decription>Xx.xxxx.xx.xx.x</decription></item>
+            <item><term>k11</term><decription>xX.xxxx.xx.xx.x</decription></item>
+            <item><term>k21</term><decription>xx.Xxxx.xx.xx.x</decription></item>
+            <item><term>k22</term><decription>xx.xXxx.xx.xx.x</decription></item>
+            <item><term>k23</term><decription>xx.xxXx.xx.xx.x</decription></item>
+            <item><term>k24</term><decription>xx.xxxX.xx.xx.x</decription></item>
+            <item><term>k31</term><decription>xx.xxxx.Xx.xx.x</decription></item>
+            <item><term>k32</term><decription>xx.xxxx.xX.xx.x</decription></item>
+            <item><term>k41</term><decription>xx.xxxx.xx.Xx.x</decription></item>
+            <item><term>k42</term><decription>Xx.xxxx.xx.xX.x</decription></item>
+            <item><term>k51</term><decription>xx.xxxx.xx.xx.X</decription></item>
+            </list>
+            </param>
+            <exception cref="T:Nbb.InvalidDuomenysException">
+            <see cref="T:Nbb.InvalidDuomenysException"/> will be thrown if data of any particular <see cref="T:System.Data.DataColumn"/> is not in range from 0 to 9
+            </exception>
+            <exception cref="T:Nbb.InvalidKodasException">
+            <see cref="T:Nbb.InvalidKodasException"/> will be thrown in one of following cases:
+            <list type="bullet">
+            <item>if xx.Xxxx.xx.xx.x is equal to zero</item>
+            <item>if all three digits of xx.xXXX.xx.xx.x are zeroes (xx.x000.xx.xx.x)</item>
+            </list>
+            </exception>
+            <example>Innitializing example: <c>VietosKodas vk = new VietosKodas(drow);</c></example>
+        </member>
+        <member name="M:Nbb.VietosKodas.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Nbb.VietosKodas"/> type.
+            </summary>
+            <param name="kodasAsString">Kodas. Pattern: "xx.xxxx.xx.xx.x" (be kabučių)</param>
+            <exception cref="T:Nbb.InvalidKodasException">
+            <see cref="T:Nbb.InvalidKodasException"/> will be thrown in following cases:
+            <list type="bullet">
+            <item>parameter doesn't match the pattern xx.xxxx.xx.xx.x</item>
+            <item>xx.Xxxx.xx.xx.x equals to zero</item>
+            <item>all three digits xx.xXXX.xx.xx.x are zeroes</item>
+            </list>
+            </exception>
+            <example>Innitializing example: <c>VietosKodas vk = new VietosKodas("01.1255.02.05.0");</c></example>
+        </member>
+        <member name="M:Nbb.VietosKodas.ToString">
+            <summary>
+            Overriden method toString().
+            </summary>
+            <returns>Returns code representation as xx.xxxx.xx.xx.x <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:Nbb.VietosKodas.invalidKodasMessage(System.Int32,System.Int32)">
+            <summary>
+            Tikrina kodą ir grąžina klaidos pranešimo tekstą, jeigu randa klaidingą kodą.
+            </summary>
+            <param name="b">Skaičius, atitinkantis kodo skaitmenį xx.Xxxx.xx.xx.x</param>
+            <param name="ccc">Skaičius, atitinkantis kodo skaitmenis xx.xXXX.xx.xx.x</param>
+            <returns>Klaidos pranešimo tekstas, nustačius neleistinus kodo skaitmenis. Jeigu <c>string.Empty</c>, tai reiškia, kad klaidos nenustatyta.</returns>
+        </member>
+        <member name="P:Nbb.VietosKodas.aa">
+            <summary>Grąžina du pirmuosius kodo simbolius: XX.xxxx.xx.xx.x; tipas - <see cref="T:System.String"/>.</summary>
+            <value>XX.xxxx.xx.xx.x</value>
+            <example>Jeigu 23.xxxx.xx.xx.x, tai <c>aa</c> grąžina "23". Jeigu 01.xxxx.xx.xx, tai <c>aa</c> grąžina "01".</example>
+        </member>
+        <member name="P:Nbb.VietosKodas.b">
+            <summary>Grąžina kodo antrosios grupės pirmąjį skaitmenį: xx.Xxxx.xx.xx.x; tipas - <see cref="T:System.Int32"/>.</summary>
+            <remarks>Kode tas skaitmuo negali būti 0. Konstruktorius neleidžia sukurti kodo, kurio b=0 (t.y. kodo "xx.0xxx.xx.xx.x").</remarks>
+            <value>xx.Xxxx.xx.xx.x</value>
+            <example>Jeigu xx.3001.xx.xx.x, tai <c>b</c> grąžina 3.</example>
+        </member>
+        <member name="P:Nbb.VietosKodas.ccc">
+            <summary>Grąžina <see cref="T:System.Int32"/> tipo skaičių, atitinkantį kodo antros grupės antrojo-ketvirtojo skaitmenų seką xx.xXXX.xx.xx.x.</summary>
+            <remarks>Konstruktorius neleidžia sukurti kodo, kurio ccc=0 (t.y. negalimas kodas "xx.x000.xx.xx.x").</remarks>
+            <value>xx.xXXX.xx.xx.x</value>
+            <example>Jeigu xx.3001.xx.xx.x, tai <c>ccc</c> grąžina 1. Jeigu xx.5048.xx.xx.x, tai <c>ccc</c> grąžina 48. Jeigu xx.1356.xx.xx.x, tai <c>ccc</c> grąžina 356.</example>
+        </member>
+        <member name="P:Nbb.VietosKodas.dd">
+            <summary>Grąžina <see cref="T:System.Int32"/> tipo skaičių, atitinkantį kodo trečiosios grupės skaitmenų seką xx.xxxx.XX.xx.x.</summary>
+            <value>xx.xxxx.XX.xx.x</value>
+            <example>Jeigu xx.xxxx.02.xx.x, tai <c>dd</c> grąžina 2. Jeigu xx.xxxx.10.xx.x, tai <c>dd</c> grąžina 10.</example>
+        </member>
+        <member name="P:Nbb.VietosKodas.ee">
+            <summary>Grąžina <see cref="T:System.Int32"/> tipo skaičių, atitinkantį kodo ketvirtosios grupės abiejų skaitmenų seką xx.xxxx.xx.XX.x.</summary>
+            <value>xx.xxxx.xx.XX.x</value>
+            <example>Jeigu xx.xxxx.xx.00.x, tai <c>ee</c> grąžina 0. Jeigu xx.xxxx.xx.03.x, tai <c>ee</c> grąžina 3. Jeigu xx.xxxx.xx.49.x, tai <c>ee</c> grąžina 49.</example>
+        </member>
+        <member name="P:Nbb.VietosKodas.f">
+            <summary><see cref="T:System.Int32"/> tipo skaičius, atitinkantis kodo paskutinįjį skaitmenį xx.xxxx.xx.xx.X.</summary>
+            <value>xx.xxxx.xx.xx.X</value>
+            <example>Jeigu xx.xxxx.xx.xx.0, tai <c>f</c> grąžina 0. Jeigu xx.xxxx.xx.xx.9, tai <c>f</c> grąžina 9.</example>
+        </member>
+        <member name="T:Nbb.Siule">
+            <summary>
+            Bėgių kelio siūlės tipas.
+            </summary>
+            <remarks>
+            Geležinkelio kelias sudarytas iš dviejų bėgių - siūlių.
+            Aprašant defekto arba suvirinimo vietą, nurodoma, kurioje siūlėje yra defektas arba suvirinimas.
+            Viena siūlių laikoma kairiąja, kita - dešiniąja. Nustatoma, žiūrint išilgai linijos kilometrų didėjimo kryptimi.
+            </remarks>
+        </member>
+        <member name="F:Nbb.Siule.sl">
+            <summary>
+            Private static - galimos siūlių kodų ir juos atitinkančių pavadinimų reikšmės
+            </summary>
+        </member>
+        <member name="M:Nbb.Siule.#ctor(System.Int32)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.Siule"/> objektą
+            </summary>
+            <param name="siulesKodas">Siūlės kodas</param>
+            <example><c>Siule siule = new Siule(9)</c></example>
+            <exception cref="T:System.ArgumentOutOfRangeException">Išmeta 
+            <see cref="T:System.ArgumentOutOfRangeException"/>, kai kodas netinka nė vienai siūlei.
+            </exception>
+        </member>
+        <member name="P:Nbb.Siule.kodas">
+            <summary>
+            Grąžina <see cref="T:System.Int32"/> tipo siūlės kodą.
+            </summary>
+            <value>Siūlės kodas</value>
+        </member>
+        <member name="P:Nbb.Siule.pavadinimas">
+            <summary>
+            Grąžina <see cref="T:System.String"/> tipo siūlės pavadinimą -
+            "kairioji" arba "dešinioji".
+            </summary>
+            <value>Siūlės pavadinimas</value>
+        </member>
+        <member name="T:Nbb.Linija">
+            <summary>
+            Geležinkelio linijos tipas.
+            </summary>
+            <remarks>
+            <para>
+            Geležinkelis yra sudalintas į linijas. Kiekviena linija turi savo kodą (dviženklį skaičių) ir pavadinimą,
+            parodantį, iš kur į kur (kilometrų didėjimo kryptimi) veda linija. Pavyzdžiui, kodas - "01", pavadinimas - "Vilnius - Klaipėda".
+            </para>
+            <para>
+            Realiai geležinkelio linijai priklauso joje esančios stotys. Bet šitame modulyje infrastruktūros aprašymui panaudota kita schema -
+            objektas <see cref="T:Nbb.Stotis"/> "turi" (<i>has a</i>) objektą <see cref="T:Nbb.Linija"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Nbb.Linija.#ctor(System.String,System.String)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.Linija"/> objektą.
+            </summary>
+            <param name="lin_kodas">Geležinkelio linijos kodas</param>
+            <param name="lin_pavadinimas">Geležinkelio linijos pavadinimas</param>
+            <example><c>Nbb.Linija linija = new Nbb.Linija("24", "Rimkai - Draugystė")</c></example>
+        </member>
+        <member name="P:Nbb.Linija.kodas">
+            <summary>
+            <para>
+            Grąžina <see cref="T:System.String"/> geležinkelio linijos kodą.
+            </para>
+            <para>
+            Kodas - dviženklis "00" formato skaičius, nuo 01 iki 49, pvz.: "01", "23".
+            </para>
+            </summary>
+            <value>Linijos kodas</value>
+        </member>
+        <member name="P:Nbb.Linija.pavadinimas">
+            <summary>
+            Grąžina <see cref="T:System.String"/> geležinkelio linijos pavadinimą.
+            </summary>
+            <value>Linijos pavadinimas</value>
+        </member>
+        <member name="T:Nbb.Stotis">
+            <summary>
+            Geležinkelio stoties tipas.
+            </summary>
+            <remarks>
+            <para>Koduojant defekto arba suvirinimo vietą, stotys yra skirstomos į dideles ir mažas.
+            Didelės stotys turi savo kodą (dviženklis skaičius), o mažos kodo neturi.
+            Čia aprašant stotis, mažoms priskirtas sąlyginis kodas (placemark) "0".</para>
+            <para>Geležinkelio stotis turi pradžią ir pabaigą. Pradžia yra mažesnioji kelio koordinatė,
+            iš nusakančių stoties ribas. Pabaiga yra didesnioji kelio koordinatė iš koordinačių, 
+            nusakančių stoties ribas. Dar ribos gali būti aprašytos atstumu nuo linijos pradžios.
+            Stoties pradžia yra mažesnysis atstumas (čia - metrais) nuo linijos pradžios, o pabaiga -
+            didesnis atstumas nuo linijos pradžios.</para>
+            </remarks>
+        </member>
+        <member name="M:Nbb.Stotis.#ctor(System.String,System.String,System.Int32,System.Int32,Nbb.Linija)">
+            <summary>
+            Inicializuoja naują objektą <see cref="T:Nbb.Stotis"/>.
+            </summary>
+            <param name="pKodas">Stoties kodas</param>
+            <param name="pPavadinimas">Stoties pavadinimas</param>
+            <param name="pNuo_m">Stoties pradžios atstumas metrais nuo linijos pradžios</param>
+            <param name="pIki_m">Stoties pabaigos atstumas metrais nuo linijos pradžios</param>
+            <param name="pLinija">Linija, kuriai priklauso stotis</param>
+            <example><code>
+            Nbb.Linija lin17 = new Nbb.Linija("17", "Radviliškis - Pagėgiai - valstybės siena");
+            Nbb.Stotis pagegiai =  new Nbb.Stotis("87", "Pagėgiai", 140786, 143282, lin17);
+            </code></example>
+        </member>
+        <member name="M:Nbb.Stotis.#ctor(System.Xml.XmlNode,Nbb.Linija)">
+            <summary>
+            Inicializuoja naują objektą <see cref="T:Nbb.Stotis"/>.
+            </summary>
+            <param name="xmlNodeStotis"><see cref="T:System.Xml.XmlNode"/> tipo objektas, aprašantis stotį. Privalo turėti šiuos child-tagus:
+            <list type="bullet">
+            <item><term><c>&lt;kodas&gt;</c></term><description>stoties kodas</description></item>
+            <item><term><c>&lt;pavadinimas&gt;</c></term><description>stoties pavadinimas</description></item>
+            <item><term><c>&lt;nuo&gt;</c></term><description>stoties pradžios koordinatė</description></item>
+            <item><term><c>&lt;iki&gt;</c></term><description>stoties pabaigos koordinatė</description></item>
+            </list>
+            Tagai <c>&lt;nuo&gt;</c> ir <c>&lt;iki&gt;</c> - sudėtiniai. Juose turi būti šie child-tagai:
+            <list type="bullet">
+            <item><term><c>&lt;km&gt;</c></term><description>kelio koordinatės kilometras</description></item>
+            <item><term><c>&lt;pk&gt;</c></term><description>kelio koordinatės piketas</description></item>
+            <item><term><c>&lt;m&gt;</c></term><description>atstumas metrais nuo piketinio stulpelio</description></item>
+            </list>
+            </param>
+            <param name="pLinija">Linija, kuriai priklauso geležinkelio stotis.</param>
+            <example>
+            Stotį aprašančio xml pavyzdys, kuris yra, tarkime, <see cref="T:System.Xml.XmlNode"/> xmlStotis turinys:
+            <![CDATA[
+            <stotis>
+              <pavadinimas>Pavenčiai</pavadinimas>
+              <kodas>46</kodas>
+              <nuo>
+                <km>237</km><pk>9</pk><m>43</m>
+              </nuo>
+              <iki>
+                <km>240</km><pk>1</pk><m>26</m>
+              </iki>
+            </stotis>
+            ]]>
+            Tada <see cref="T:Nbb.Stotis"/> inicializavimo pavyzdys būtų:
+            <code>
+            Nbb.Linija linija_01 = new Nbb.Linija("01", "Vilnius - Klaipėda");
+            Nbb.Stotis pavenciai =  new Nbb.Stotis(xmlStotis, linija_01);
+            </code>
+            </example>
+        </member>
+        <member name="M:Nbb.Stotis.xmlToM(System.Xml.XmlNode)">
+            <summary>
+            <see cref="T:System.Xml.XmlNode"/> objektą, aprašantį kelio koordinatę (km, pk, m), verčia <see cref="T:System.Int32"/> atstumu nuo linijos pradžios (metrais).
+            </summary>
+            <param name="kKoord"><see cref="T:System.Xml.XmlNode"/> tipo objektas, kurio xml aprašo geležinkelio kelio koordinatę. Xml turi turėti šiuos child-tagus:
+            <list type="bullet">
+            <item><term><c>&lt;km&gt;</c></term><description>kelio koordinatės kilometras</description></item>
+            <item><term><c>&lt;pk&gt;</c></term><description>kelio koordinatės piketas</description></item>
+            <item><term><c>&lt;m&gt;</c></term><description>atstumas metrais nuo piketinio stulpelio</description></item>
+            </list>
+            </param>
+            <returns>Aprašomos vietos <see cref="T:System.Int32"/> atstumas metrais nuo linijos pradžios.</returns>
+        </member>
+        <member name="P:Nbb.Stotis.kodas">
+            <summary>Grąžina <see cref="T:System.String"/> stoties kodą.</summary>
+            <value>Stoties kodas</value>
+            <remarks>Kodavimo sistemoje kodą turi tik didelės stotys (tiksliau, didele laikoma ta stotis, kuriai
+            priskirtas kodas - dviženklis skaičius). O mažos stotys yra tos, kurioms kodas nepriskirtas. Šitame modulyje
+            mažoms stotims priskirtas sąlyginis kodas "0" (placeholder).</remarks>
+        </member>
+        <member name="P:Nbb.Stotis.pavadinimas">
+            <summary>Grąžina <see cref="T:System.String"/> stoties pavadinimą</summary>
+            <value>Stoties pavadinimas</value>
+        </member>
+        <member name="P:Nbb.Stotis.nuo">
+            <summary>
+            Grąžina <see cref="T:System.Int32"/> geležinkelio stoties pradžios atstumą metrais nuo linijos pradžios.
+            </summary>
+            <value>Atstumas metrais nuo linijos pradžios iki stoties pradžios</value>
+        </member>
+        <member name="P:Nbb.Stotis.iki">
+            <summary>
+            Grąžina <see cref="T:System.Int32"/> geležinkelio stoties pabaigos atstumą metrais nuo linijos pradžios. 
+            </summary>
+            <value>Atstumas metrais nuo linijos pradžios iki stoties pabaigos</value>
+        </member>
+        <member name="P:Nbb.Stotis.linija">
+            <summary>
+            Grąžina <see cref="T:Nbb.Linija"/> liniją, kuriai priklauso ši geležinkelio stotis.
+            </summary>
+            <value>Linija, kuriai priklauso stotis</value>
+            <remarks>Ta pati stotis gali priklausyti kelioms skirtingoms linijoms.
+            Tokiu atveju tai - keli skirtingi objektai <see cref="T:Nbb.Stotis"/></remarks>
+        </member>
+        <member name="T:Nbb.Tarpstotis">
+            <summary>
+            Tarpstočio tipas.
+            </summary>
+            <remarks>Tarpstotis - tai geležinkelio kelio ruožas tarp dviejų stočių. 
+            Viena stotis (pirmoji) turi žemesnę kelio koordinatę, kita (antroji) - aukštesnę koordinatę. 
+            Pačios stotys tarpstočiui nepriklauso - tarpstotis prasideda už pirmosios stoties pabaigos, ir baigiasi prieš antrosios stoties pradžią.
+            </remarks>
+        </member>
+        <member name="M:Nbb.Tarpstotis.#ctor(Nbb.Stotis,Nbb.Stotis)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.Tarpstotis"/> objektą.
+            </summary>
+            <param name="stotis_1">Pirmoji tarpstotį ribojanti stotis - ta, kurios koordinatė žemesnė.</param>
+            <param name="stotis_2">Antroji tarpstotį ribojanti stotis - ta, kurios koordinatė aukštesnė.</param>
+        </member>
+        <member name="P:Nbb.Tarpstotis.stotis1">
+            <summary>
+            Grąžina pirmąją ribojančią stotį - tą, kurios koordinatė mažesnė. Tipas <see cref="T:Nbb.Stotis"/> 
+            </summary>
+            <value>Pirmoji tarpstotį ribojanti stotis</value>
+        </member>
+        <member name="P:Nbb.Tarpstotis.stotis2">
+            <summary>
+            Grąžina antrąją ribojančią stotį - tą, kurios koordinatė didesnė. Tipas <see cref="T:Nbb.Stotis"/>
+            </summary>
+            <value>Antroji tarpstotį ribojanti stotis</value>
+        </member>
+        <member name="P:Nbb.Tarpstotis.ilgis_m">
+            <summary>
+            Grąžina tarpstočio ilgį metrais, <see cref="T:System.Int32"/>.
+            </summary>
+            <remarks>Technically, tai yra atstumas nuo pirmosios stoties pabaigos iki antrosios stoties pradžios.</remarks>
+            <value>Tarpstočio ilgis metrais</value>
+        </member>
+        <member name="P:Nbb.Tarpstotis.pavadinimas">
+            <summary>
+            Grąžina tarpstočio pavadinimą. <see cref="T:System.String"/>
+            </summary>
+            <remarks>Tarpstočio pavadinimas yra sudarytas iš jį ribojančių stočių pavadinimų.
+            Pavyzdžiui, "Vilkyčiai - Šilutė" arba "Pagėgiai - valstybės siena".</remarks>
+            <value>Tarpstočio pavadinimas</value>
+        </member>
+        <member name="T:Nbb.KelioElementas">
+            <summary>
+            Geležinkelio kelio elemento tipas.
+            </summary>
+            <remarks>
+            Geležinkelio kelio dalys kaip inžinieriniai įrenginiai arba kaip infrastruktūros elementai, gali būti skirtingų konstrukcijų ir paskirčių. 
+            Tai gali būti: tarpstočių ir stočių keliai, stočių pagrindiniai, atvykimo-išvykimo ir kiti keliai, iešmai ir kelių sankirtos, jungiamieji keliai. 
+            Tiems tipams (elementams) aprašyti ir saugoti yra šitas tipas.
+            </remarks>
+        </member>
+        <member name="F:Nbb.KelioElementas.nr">
+            <summary>
+            Kelio elemento numeris. Gali būti neinicializuotas.
+            </summary>        
+        </member>
+        <member name="M:Nbb.KelioElementas.#ctor(Nbb.KelioElementoTipas,System.Int32)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.KelioElementas"/> objektą.
+            </summary>
+            <param name="tp">Kelio elemento tipas - viena iš enum <see cref="T:Nbb.KelioElementoTipas"/> reikšmių</param>
+            <param name="numeris">Kelio elemento numeris, <see cref="T:System.Int32"/>.</param>
+            <example><c>KelioElementas kelElem = new KelioElementas(KelioElementoTipas.iešmas, 15);</c></example>
+        </member>
+        <member name="M:Nbb.KelioElementas.#ctor(Nbb.KelioElementoTipas)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.KelioElementas"/> objektą, kai nenurodomas kelio elemento numeris.
+            </summary>
+            <param name="tp">Kelio elemento tipas - viena iš enum <see cref="T:Nbb.KelioElementoTipas"/> reikšmių</param>
+            <example><c>KelioElementas kelElem = new KelioElementas(KelioElementoTipas.iešmas);</c></example>
+        </member>
+        <member name="P:Nbb.KelioElementas.tipas">
+            <summary>
+            Grąžina kelio elemento tipą <see cref="T:Nbb.KelioElementoTipas"/>.
+            </summary>
+            <value>Kelio elemento tipas</value>
+        </member>
+        <member name="P:Nbb.KelioElementas.numeris">
+            <summary>
+            Grąžina kelio elemento numerį (<see cref="T:System.Int32"/>).
+            Prieš kreipiantis turi būti patikrinama, ar objektas turi <c>nr</c> (property <see cref="P:Nbb.KelioElementas.turiNr"/>),
+            arba kreipimasis turi būti apsaugomas <c>try-catch</c> konstrukcija.
+            </summary>
+            <remarks>
+            <para>Jeigu stotyje yra tik vienas pagrindinis kelias, 
+            koduojant tam tikrais atvejais jo numeris gali būti nenurodomas.
+            Nurodoma tiktai, kad tai yra stoties pagrindinis kelias.</para> 
+            <para>Koduojant trumpuosius kelius už iešmų, jungiančius du stoties kelius, 
+            trumpiesiems keliams čia priskiriamas kelio elemento numeris, 
+            <b>tačiau tas numeris reiškia ne to trumpojo kelio numerį, bet iešmo, 
+            nuo kurio prasideda tasai trumpasis kelias, numerį!</b></para>
+            </remarks>
+            <example><c>int nmbr = kelElem.numeris;</c></example>
+            <value>Kelio elemento numeris</value>
+            <seealso cref="P:Nbb.KelioElementas.turiNr"/>
+            <exception cref="T:System.NullReferenceException">Išmeta <see cref="T:System.NullReferenceException"/>,
+            kai kelio elemento numeris nėra incializuotas.</exception>
+        </member>
+        <member name="P:Nbb.KelioElementas.turiNr">
+            <summary>
+            Grąžina <c>true</c>, jeigu turi numerį, ir <c>false</c>, jeigu numerio neturi (jeigu numeris neinicializuotas).
+            </summary>
+            <remarks>Metodas turėtų būti naudojamas, prieš kreipiantis į objekto <c>nr</c> sąvybę, kuri gali būti neinicializuota.
+            Kitas galimas būdas - kreipimąsi į sąvybę <c>nr</c> apsaugoti <c>try-catch</c> konstrukcija.</remarks>
+            <value>Ar turi numerį</value>
+            <example><c>if (kelElem.turiNr) ...</c></example>
+        </member>
+        <member name="T:Nbb.KelioKoordinate">
+            <summary>
+            Geležinkelio koordinatės tipas.
+            </summary>
+            <remarks>
+            <para>
+            Vieta geležinkelio kelyje paprastai nusakoma jos koordinate:
+            <list type="bullet">
+            <item><term>kilometras</term>
+            <description>kelintajame kilometre, skaičiuojant nuo linijos pradžios, yra aprašoma vieta. 
+            Linija prasideda pirmuoju kilometru, po jo eina antrasis, ir t.t..</description>
+            </item>
+            <item><term>piketas</term>
+            <description>piketas - tai 100 metrų geležinkelio atkarpa. 
+            Kiekvieno kilometro piketai yra sunumeruoti: pirmasis, antrasis ir - iki dešimtojo. 
+            Kitas kilometras turi vėl dešimt piketų.</description>
+            </item>
+            <item><term>metrai</term>
+            <description>atstumas metrais nuo artimiausio piketinio stulpelio, žiūrint piketų mažėjimo kryptimi.</description>
+            </item>
+            </list>
+            </para>
+            <para>Kitas būdas nusakyti vietai kelyje yra <b>atstumas nuo linijos pradžios</b>. 
+            Jį galima apskaičiuoti iš žinomos kelio koordinatės.</para>
+            </remarks>
+        </member>
+        <member name="F:Nbb.KelioKoordinate.okm">
+            <summary>
+            Kilometras. T.y., linijos kilometro eilės numeris, pradedant numeruoti nuo vieneto.
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioKoordinate.opk">
+            <summary>
+            Piketas. T.y., esamojo kilometro piketo eilės numeris, pradedant numeruoti nuo vieneto.
+            </summary>
+        </member>
+        <member name="F:Nbb.KelioKoordinate.om">
+            <summary>
+            Metrai. T.y., atstumas metrais nuo artimiausio piketinio stulpelio kilometrų mažėjimo krypimi iki aprašomos vietos kelyje.
+            </summary>
+        </member>
+        <member name="M:Nbb.KelioKoordinate.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.KelioKoordinate"/> objektą.
+            </summary>
+            <param name="kkKm">Kelio koordinatės kilometras</param>
+            <param name="kkPk">Kelio koordinatės piketas</param>
+            <param name="kkM">Kelio koordinatės metrai</param>
+            <example><c>Nbb.KelioKoordinate kk = new Nbb.KelioKoordinate(368, 2, 98);</c></example>
+        </member>
+        <member name="M:Nbb.KelioKoordinate.#ctor(System.Int32)">
+            <summary>
+            Inicializuoja naują <see cref="T:Nbb.KelioKoordinate"/> objektą, kai kelio koordinatės piketas ir metrai nenurodomi.
+            </summary>
+            <param name="kkKm">Kelio koordinatės kilometras</param>
+            <example><c>Nbb.KelioKoordinate kk = new Nbb.KelioKoordinate(278);</c></example>
+        </member>
+        <member name="P:Nbb.KelioKoordinate.km">
+            <summary>
+            Grąžina kelio koordinatės kilometrą, <see cref="T:System.Int32"/>.
+            </summary>
+            <value>Kelio koordinatės kilometras</value>
+            <example>Jeigu <c>koord</c> yra <see cref="T:Nbb.KelioKoordinate"/> tipo, tai galima: <c>int kilom = koord.km;</c></example>
+        </member>
+        <member name="P:Nbb.KelioKoordinate.pk">
+            <summary>
+            <para>Grąžina kelio koordinatės piketą, <see cref="T:System.Int32"/>.</para>
+            <para>Gali būti neinicializuotas.
+            Prieš kreipiantis turi būti patikrinama ar objektas turi pilną koordinatę (žr. <see cref="P:Nbb.KelioKoordinate.yraPilna"/>), 
+            arba kreipimasis turi būti apsaugomas <c>try-catch</c> konstrukcija.</para>
+            </summary>
+            <value>Kelio koordinatės piketas</value>
+            <exception cref="T:System.NullReferenceException">Išmeta <see cref="T:System.NullReferenceException"/>,
+            kai kelio koordinatės piketas nėra incializuotas</exception>
+            <example>Jeigu <c>koord</c> yra <see cref="T:Nbb.KelioKoordinate"/> tipo, tai galima:
+            <code>
+            int piketas;
+            try
+            {
+                piketas = koord.pk;
+            }
+            catch (NullReferenceException)
+            {
+                // atlikti veiksmus, kai paaiškėja, kad piketas neinicializuotas
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:Nbb.KelioKoordinate.m">
+            <summary>
+            <para>Grąžina kelio koordinatės metrus <see cref="T:System.Int32"/>.</para>
+            <para>Gali būti neinicializuotas.
+            Prieš kreipiantis turi būti patikrinama ar objektas turi pilną koordinatę (žr. <see cref="P:Nbb.KelioKoordinate.yraPilna"/>), 
+            arba kreipimasis turi būti apsaugomas <c>try-catch</c> konstrukcija.</para>
+            </summary>
+            <value>Kelio koordinatės metrai</value>
+            <exception cref="T:System.NullReferenceException">Išmeta <see cref="T:System.NullReferenceException"/>,
+            kai kelio koordinatės metrai nėra incializuoti</exception>
+            <example>Jeigu <c>koord</c> yra <see cref="T:Nbb.KelioKoordinate"/> tipo, tai galima:
+            <code>
+            int metrai;
+            try
+            {
+                metrai = koord.m;
+            }
+            catch (NullReferenceException)
+            {
+                // atlikti veiksmus, kai paaiškėja, kad metrai neinicializuotis
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:Nbb.KelioKoordinate.yraPilna">
+            <summary>
+            Ar inicalizuota pilna kelio koodinatė. <c>true</c> - jeigu yra inicializuoti ir <c>km</c>, ir <c>pk</c>, ir <c>m</c>. 
+            <c>false</c> - kai yra inicializuotas tik <c>km</c>.
+            </summary>
+            <value>Ar pilna koordinatė</value>
+        </member>
+        <member name="T:Nbb.Atstumas">
+            <summary>
+            Struktūra laikyti atstumui, išreikštam metrais.
+            </summary>
+            <remarks>Aprašant vietą geležinkelio kelyje galimi šie atvejai:
+            <list type="bullet">
+            <item>nurodomas atstumas nuo iešmo</item>
+            <item>atstumas nuo iešmo nenurodomas</item>
+            <item>atstumas nuo iešmo nurodomas, bet jis lygus 0</item>
+            </list>
+            Kad atskirti išvardintus atvejus, yra šitas tipas. Jo objektas gali:
+            <list type="bullet">
+            <item>rodyti konkretų atstumą, pvz., 157 m</item>
+            <item>rodyti atstumą 0 m</item>
+            <item>gali būti neinicializuotas, t.y., lygus <c>null</c></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Nbb.Atstumas.oM">
+            <summary>
+            Atstumo objektas
+            </summary>
+        </member>
+        <member name="M:Nbb.Atstumas.#ctor(System.Int32)">
+            <summary>
+            Inicijuoja naują <see cref="T:Nbb.Atstumas"/> objektą.
+            </summary>
+            <param name="metrai">Atstumas metrais</param>
+            <example><c>Nbb.Atstumas atstumas = new Nbb.Atstumas(149);</c></example>
+        </member>
+        <member name="P:Nbb.Atstumas.m">
+            <summary>
+            Grąžina <see cref="T:System.Int32"/> atstumą išreikštą metrais.
+            </summary>
+            <value>Atstumas metrais</value>
+            <example>
+            Tarkime, <c>atst</c> yra <see cref="T:Nbb.Atstumas"/> tipo. Tuomet galima:
+            <c>int dist = atst.m</c>
+            </example>
+        </member>
+        <member name="T:Nbb.Sandura">
+            <summary>
+            Iešmo sandūros tipas.
+            </summary>
+            <remarks><para>Pagal patvirtintą iešmo sandūrų suvirinimo technologiją, 
+            iešmo sandūros turi būti virinamos tam tikru griežtai nustatytu eiliškumu.
+            Taip iešmo suvirinimai gauna savo numerius - pirmas, antras, tečias... iki dvylikto.
+            Aprašant suvirinimo vietą iešme, yra nurodomas suvirinimo numeris.</para>
+            <para><see cref="T:Nbb.Sandura"/> objektas nebus inicializuotas, jeigu suvirinimas arba defektas ne iešme.</para>
+            </remarks>
+        </member>
+        <member name="F:Nbb.Sandura.oNr">
+            <summary>
+            Suvirinimo numerio objektas.
+            </summary>
+        </member>
+        <member name="M:Nbb.Sandura.#ctor(System.Int32)">
+            <summary>
+            Incializuoja naują <see cref="T:Nbb.Sandura"/> objektą.
+            </summary>
+            <param name="num">Iešmo suvirinimo eilės numeris</param>
+            <example><c>Sandura penkta_sand = new Sandura(5);</c></example>
+        </member>
+        <member name="P:Nbb.Sandura.Nr">
+            <summary>
+            Grąžina <see cref="T:System.Int32"/> suvirinimo numerį.
+            </summary>
+            <value>Suvirinimo numeris</value>
+            <example><c>int numeris = sitaSandura.Nr;</c></example>
+        </member>
+        <member name="T:Nbb.Vieta">
+            <summary>
+            Struktūra geležinkelio bėgių defekto arba suvirinimo vietai aprašyti, turinti
+            visus geležinkelio kelio parametrus, kurie buvo užkoduoti konkrečiame kode.
+            </summary>
+            <remarks>Nagrinėjant defekto arba suvirinimo vietos kodą, grąžintoje <see cref="T:Nbb.Vieta"/> struktūroje
+            bus inicializuoti ne visi laukai. Prieš kreipiantis į struktūros <see cref="T:Nbb.Vieta"/> laukus,
+            pirmiausia "atsiklausti", ar laukas nėra lygus <c>null</c>, arba apsaugoti kreipimąsi <c>try-catch</c> konstrukcija.
+            </remarks>
+        </member>
+        <member name="F:Nbb.Vieta.kodas">
+            <summary>
+            Vietos kodas, <see cref="T:System.String"/>. Šablonas: "xx.xxxx.xx.xx.x", kur x - skaitmuo. 
+            </summary>
+            <value>Vietos kodas</value>
+            <example><c>string kd = vt.kodas;</c></example>
+            <seealso cref="T:Nbb.VietosKodas"/>
+        </member>
+        <member name="F:Nbb.Vieta.galimosStotys">
+            <summary>
+            Galimos stotys. <see cref="T:System.Collections.Generic.List`1"/>, kur <c>T</c> yra <see cref="T:Nbb.Stotis"/>.
+            </summary>
+            <remarks>
+            <para>Gali būti tuščias sąrašas, jeigu aprašoma vieta yra tarpstotyje.</para>
+            <para>Nors konketi vieta yra visada konkrečioje stotyje, 
+            bet trūkstant duomenų geležinkelio linijas aprašančioje struktūroje,
+            kartais galimas neapibrėžtumas - iš vietos kodo nesigauna vienareikšmiškai pasakyti,
+            kokiai linijai priklauso kodu aprašoma vieta. Tokiu atveju laikoma,
+            kad galimos kelios stotys: kaskart ta pati stotis, bet priklausanti kitai linijai.
+            </para>
+            </remarks>
+            <value>Galimų stočių sąrašas</value>
+        </member>
+        <member name="F:Nbb.Vieta.tarpstotis">
+            <summary>
+            Tarpstotis, kuriame yra aprašoma vieta. <see cref="T:Nbb.Tarpstotis"/>.
+            </summary>
+            <remarks>Gali būti lygus null, jeigu aprašoma vieta yra stotyje.</remarks>  
+            <value>Tarpstotis, kuriame yra aprašoma vieta</value>
+        </member>
+        <member name="F:Nbb.Vieta.kelioElementas">
+            <summary>
+            Kelio elementas, kuriame yra aprašoma vieta. <see cref="T:Nbb.KelioElementas"/>. 
+            </summary>
+            <remarks>Negali būti lygus <c>null</c>.</remarks>
+            <value>Kelio elementas</value>
+        </member>
+        <member name="F:Nbb.Vieta.koordinate">
+            <summary>
+            Aprašomos vietos kelio koordinatė. <see cref="T:Nbb.KelioKoordinate"/>. 
+            </summary>
+            <remarks>Gali būti lygi <c>null</c>, jeigu vieta nusakoma atstumu nuo iešmo. 
+            Arba <see cref="T:Nbb.KelioKoordinate"/> gali būti turėti inicializuotą tikai linijos kilometrą,
+            jeigu aprašomas suvirinimas yra mažoje stotyje.</remarks>
+            <value>Kelio koordinatė</value>
+        </member>
+        <member name="F:Nbb.Vieta.atstumasNuoIesmo">
+            <summary>
+            Aprašomos vietos atstumas (metrais) nuo iešmo. <see cref="T:Nbb.Atstumas"/>. 
+            </summary>
+            <remarks>Gali būti lygus <c>null</c>, 
+            jeigu aprašoma vieta nusakoma kelio koordinate.</remarks>
+            <value>Atstumas nuo iešmo</value>
+        </member>
+        <member name="F:Nbb.Vieta.siule">
+            <summary>
+            Aprašomos vietos bėgio siūlė. <see cref="T:Nbb.Siule"/>. 
+            </summary>
+            <remarks>Kai kuriais atvejais gali būti nenurodyta ir todėl lygi <c>null</c>.</remarks>
+            <value>Bėgių siūlė</value>
+        </member>
+        <member name="F:Nbb.Vieta.iesmoSandura">
+            <summary>
+            Iešmo sandūros eilės numeris pagal suvirinimo schemą. <see cref="T:Nbb.Sandura"/>. 
+            </summary>
+            <remarks>Tik suvirinimams, kai suvirinimas iešme. Kitais atvejais - <c>null</c>.</remarks>
+            <value>Suvirinimo numeris</value>
+        </member>
+        <member name="T:Nbb.LGIF">
+            <summary>
+            <c>Static</c> klasė, kurios metodas loadData nuskaito iš duomenų failo informaciją
+            apie geležinkelio infrastruktūrą tolimesniam apdorojimui - vietos kodo analizavimui.
+            </summary>
+        </member>
+        <member name="F:Nbb.LGIF.infra">
+            <summary>Struktūra, į kurią užkraunami duomenys iš xml failo:
+             <i>{'linijos_kodas' : stočių_sąrašas, 'linijos_kodas' : stočių_sąrašas, ...}</i>
+             </summary>
+             <todo>Padaryti, kad būtų ne public, o prieinama tik draugiškai klasei VietosKodasParser</todo>
+        </member>
+        <member name="F:Nbb.LGIF.specStotys">
+            <summary>
+            Stotys, kurios šiame kontekste gali būti traktuojamos kaip specialios - t.y., 
+            kuriose vietos kodavimas tam tikrais atvejais dėl tam tikrų priežasčių
+            gali būti atliekamas pažeidžiant nustatytas kodavimo taisykles.
+            </summary>
+            <remarks>
+            <para><b>APIE SPECIALŲ ATVEJĮ</b></para>
+            <para><b>Situacija.</b> Labai ilga (keli km) didelė (t.y., turinti savo kodą) stotis, kurioje yra du (keli) pagrindiniai keliai.</para>
+            <para><b>Problema.</b> Labai ilguose pagrindiniuose keliuose nepatogu defekto (suvirinimo) vietą nusakyti (ir rasti), 
+            matuojant atstumą nuo iešmo. Žymiai patogiau - pagal kelio koordinatę. O dabartinė kodavimo sistema, didelėje stotyje 
+            neleidžia nurodyti pagrindinio kelio numerio - trečiasis skaičius kode (xx.Xxxx.xx.xx.x) 1 arba 2 reiškia, kad nurodomas pagrindinis stoties kelias, 
+            ir viskas. Todėl esant keliems pagrindiniams keliams, nurodžius vietą pagal kelio koordinatę, nepavyktų nurodyti, <i>katrame</i> 
+            iš pagrindių kelių yra defektas.</para>
+            <para><b>Sprendimas.</b> Kode xx.Xxxx.xx.xx.x nurodomas 1 arba 2 (pagr. kelio numeris), o xx.xXXX.XX.XX.x nurodoma kelio koordinatė.</para>
+            <para>Kad stotis gali būti traktuojama kaip specialus atvejis pažymima duomenų faile (lgif.xml) stoties tag'e pridėjus tuščią child-tag <c>&lt;spec /&gt;</c></para>
+            </remarks>
+        </member>
+        <member name="F:Nbb.LGIF.ExceptMsgs">
+            <summary>
+            Pranešimų apie duomenų nuskaitymo klaidas žodynas.
+            </summary>
+        </member>
+        <member name="M:Nbb.LGIF.loadData(System.String)">
+            <summary>
+            Metodas užkrauna duomenis į klasės vidinę struktūrą iš išorinio xml failo. 
+            </summary>
+            <param name="xmlDataFileName">Duomenų failo pilnas pavadinimas.</param>
+            <example><c>Nbb.LGIF.loadData();</c></example>
+            <example><c>Nbb.LGIF.loadData(@"C:\localFileName.xml");</c></example>
+            <exception cref="T:Nbb.FileIOFailureException">
+            Išmetama <see cref="T:Nbb.FileIOFailureException"/> visais atvejais, kai nepavyksta paimti duomenų iš duomenų failo:
+            <list type="bullet">
+            <item>duomenų failas neegzistuoja</item>
+            <item>duomenų failo nepavyksta perskaityti (permission, corrupted ir pan.)</item>
+            <item>xml klaida - kai nepavyksta parsinti xml</item>
+            <item>klaida nuskaitant duomenis - xml neatitinka reikiamos struktūros</item>
+            </list>
+            </exception>
+        </member>
+        <member name="T:Nbb.VietosKodasParser">
+            <summary>
+            <c>Static</c> klasė geležinkelio bėgių defekto arba suvirinimo vietos kodui nagrinėti.
+            </summary>
+            <seealso cref="T:Nbb.VietosKodas"/>
+        </member>
+        <member name="F:Nbb.VietosKodasParser.MAX_SANDURU_IESME">
+            <summary>
+            Maksimalus suvirinamų sandūrų skaičius iešme.
+            </summary>
+        </member>
+        <member name="F:Nbb.VietosKodasParser.ExcpMsgs">
+            <summary>
+            Kodo klaidų pranešimų tekstai.
+            </summary>
+        </member>
+        <member name="M:Nbb.VietosKodasParser.parseDefektas(Nbb.VietosKodas,System.Boolean)">
+            <summary>
+            Metodas nagrinėja defekto kodą ir grąžina objektą <see cref="T:Nbb.Vieta"/>, kuris aprašo kodu nurodytą vietą geležinkelyje.
+            </summary>
+            <param name="kodas">Kodas, kurį reikia išnagrinėti</param>
+            <param name="special">Optional. Ar traktuoti kai kurias stotis kaip specialų atvejį. Žr. <see cref="F:Nbb.LGIF.specStotys"/> aprašymą. Default - <c>true</c>.</param>
+            <returns><see cref="T:Nbb.Vieta"/>, kurios ne visi laukai inicializuoti. Kreipiantis į laukus, tikrinti, ar laukas nelygus <c>null</c>)</returns>
+            <exception cref="T:Nbb.InvalidKodasException">Išmetama kaskart, kai nagrinėjant kodą, prieinama išvados, kad toks kodas neteisingas. Laukas Message turi išvados aprašymą.</exception>
+            <example>
+            Pavyzdys, kaip būtų galima nagrinėti defekto kodą:
+            <code>
+            try
+            {
+                string strKodas = "01.1250.02.15.0";
+                Nbb.LGIF.loadData();
+                Nbb.Vieta vieta = Nbb.VietosKodasParser.parseDefektas(Nbb.VietosKodas(strKodas));
+            }
+            catch (Nbb.FileIOFailureException rffe)
+            {
+                // bla bla bla
+            }
+            catch (Nbb.InvalidKodasException nke)
+            {
+                // bla bla bla
+            }
+            </code></example>
+        </member>
+        <member name="M:Nbb.VietosKodasParser.parseSuvirinimas(Nbb.VietosKodas,System.Boolean)">
+            <summary>
+            Metodas nagrinėti suvirinimo kodui.
+            </summary>
+            <param name="kodas">Kodas, kurį reikia išnagrinėti</param>
+            <param name="special">
+            Optional. Ar traktuoti kai kurias stotis kaip specialų atvejį. Žr. <see cref="F:Nbb.LGIF.specStotys"/> aprašymą.
+            Default reikšmė - <c>true</c>.</param>
+            <returns><see cref="T:Nbb.Vieta"/>, kurios ne visi laukai inicializuoti (naudojant, tikrinti, ar laukas nelygus <c>null</c>)</returns>
+            <exception cref="T:Nbb.InvalidKodasException">Išmetama kaskart, kai nagrinėjant kodą, prieinama išvados, kad toks kodas neteisingas.
+            Laukas Message turi klaidos aprašymą.</exception>
+            <example>
+            Pavyzdys, kai būtų galima nagrinėti suvirinimo kodą:
+            <code>
+            try
+            {
+                string strKodas = "01.1250.02.15.0";
+                Nbb.LGIF.loadData();
+                Nbb.Vieta vieta = Nbb.VietosKodasParser.parseSuvirinimas(Nbb.VietosKodas(strKodas));
+            }
+            catch (Nbb.FileIOFailureException rffe)
+            {
+                // bla bla bla
+            }
+            catch (Nbb.InvalidKodasException nke)
+            {
+                // bla bla bla
+            }
+            </code></example>
+        </member>
+        <member name="T:Nbb.InvalidKodasException">
+            <summary>
+            Išimtinė situacija - kodo klaida.
+            </summary>
+            <remarks>Kodo semantinė klaida. Kodo struktūra teisinga, bet kažkurie kodo skaičiai neatitinka kodavimo
+            taisyklių, prieštarauja vieni kitiems arba neatitinka egzistuojančios geležinkelio infrastruktūros.
+            Aptinkama nagrinėjant kodą.
+            </remarks>
+        </member>
+        <member name="M:Nbb.InvalidKodasException.#ctor">
+            <summary>
+            Inicializuoja naują išimtinės situacijos <see cref="T:Nbb.InvalidKodasException"/> objektą.
+            </summary>
+        </member>
+        <member name="M:Nbb.InvalidKodasException.#ctor(System.String)">
+            <summary>
+            Inicializuoja naują išimtinės situacijos <see cref="T:Nbb.InvalidKodasException"/> objektą.
+            </summary>
+            <param name="message">Išimtinės situacijos priežasties aprašymas</param>
+        </member>
+        <member name="T:Nbb.InvalidDuomenysException">
+            <summary>
+            Išimtinė situacija - kodo struktūros klaida.
+            </summary> 
+            <remarks>
+            Kodas neatitinka reikalaujamo šablono arba kai kurie kodo skaičiai yra neleistini.
+            Šita klaida aptinkama dar nepradėjus nagrinėti kodo.
+            </remarks>
+        </member>
+        <member name="M:Nbb.InvalidDuomenysException.#ctor">
+            <summary>
+            Inicializuoja naują išimtinės situacijos <see cref="T:Nbb.InvalidKodasException"/> objektą.
+            </summary>
+        </member>
+        <member name="M:Nbb.InvalidDuomenysException.#ctor(System.String)">
+            <summary>
+            Inicializuoja naują išimtinės situacijos <see cref="T:Nbb.InvalidDuomenysException"/> objektą.
+            </summary>
+            <param name="message">Išimtinės situacijos priežasties aprašymas</param>
+        </member>
+        <member name="T:Nbb.FileIOFailureException">
+            <summary>
+            Išimtinė situacija - failo nuskaitymo klaida.    
+            </summary>    
+        </member>
+        <member name="M:Nbb.FileIOFailureException.#ctor">
+            <summary>
+            Inicializuoja naują išimtinės situacijos <see cref="T:Nbb.FileIOFailureException"/> objektą.
+            </summary>
+        </member>
+        <member name="M:Nbb.FileIOFailureException.#ctor(System.String)">
+            <summary>
+            Inicializuoja naują išimtinės situacijos <see cref="T:Nbb.FileIOFailureException"/> objektą.
+            </summary>
+            <param name="message">Išimtinės situacijos priežasties aprašymas</param>
+        </member>
+    </members>
+</doc>

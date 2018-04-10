@@ -1,0 +1,242 @@
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\mėn_ataskaita_template.xsl
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xsc
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xsd
+B:\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xss
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\lgif.xml
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\mėn_ataskaita_template.xsl
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xsc
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xsd
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xss
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\lgif.xml
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\mėn_ataskaita_template.xsl
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.mdb
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\suvirinimai-schema.xsc
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\suvirinimai-schema.xsd
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\suvirinimai-schema.xss
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.exe
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.pdb
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\lgif.xml
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\mėn_ataskaita_template.xsl
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.mdb
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\suvirinimai-schema.xsc
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\suvirinimai-schema.xsd
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\suvirinimai-schema.xss
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.exe
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\Suvirinimai.pdb
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai su exportu\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fEditText.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fEditText.resources
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Nbb.dll
+C:\Documents and Settings\Evaldas\My Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Nbb.xml
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\mėn_ataskaita_template.xsl
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xsc
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xsd
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\suvirinimai-schema.xss
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\Nbb.xml
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fEditText.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+\\192.168.1.1\volume1\Workroom\Suvirinimai\Suvirinimai\bin\Debug\Msg.xml
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fEditText.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\Msg.xml
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\Nbb.xml
+C:\Documents and Settings\Evaldas\Desktop\Suvirinimai\Suvirinimai\bin\Debug\DbHelper.xml
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\DbHelper.xml
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\Msg.xml
+B:\DESKTOP\Suvirinimai\Suvirinimai\bin\Debug\Nbb.xml
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\ResolveAssemblyReference.cache
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fEditText.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.read.1.tlog
+B:\DESKTOP\Suvirinimai\Suvirinimai\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\DbHelper.xml
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Msg.xml
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\bin\Debug\Nbb.xml
+C:\Users\evaldas\Documents\Visual Studio 2010\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fMonth.resources
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.mdb
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.cs
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.Designer.cs
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsc
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xsd
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\SuvirinimaiDataSet.xss
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.pdb
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\DbHelper.xml
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\Msg.xml
+D:\VS2010\Suvirinimai\Suvirinimai\bin\Debug\Nbb.xml
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csprojResolveAssemblyReference.cache
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fMonth.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fDates.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fEditText.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fTvarkytiItems.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fRequest.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktai.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Messages.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.Properties.Resources.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\SuvirinimaiApp.fAktas.resources
+D:\VS2010\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.GenerateResource.Cache
+D:\Visual Studio 2012\Projects\Suvirinimai\Suvirinimai\bin\Debug\Suvirinimai.exe.config
+D:\Visual Studio 2012\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.csproj.ResolveComReference.cache
+D:\Visual Studio 2012\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.exe
+D:\Visual Studio 2012\Projects\Suvirinimai\Suvirinimai\obj\x86\Debug\Suvirinimai.pdb
