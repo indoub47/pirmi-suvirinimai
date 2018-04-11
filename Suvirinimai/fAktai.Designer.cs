@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAktai));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,38 +41,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAktai));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAktai = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagalbinis = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.aktas_Nr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aktas_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pavadinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vardas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tikrin_arDefektas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tikrin_defKodas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.begio_tipas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suvirintojo_vardas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aktas_arUzbaigtas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.aktas_trukumai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aktas_padalinysId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tikrin_operatoriusId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFileClose = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGamintiAktusDoc = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiMAtaskaita = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiImport = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExportSelectedRows = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExportPresentedRows = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,13 +59,7 @@
             this.tsmiThingsPadaliniai = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiThingsOperatoriai = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiThingsDefektoskopai = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThingsBegiuTipai = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiThingsSuvirintojai = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThingsDarbuVadovai = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThingsMisiniai = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThingsSuvirPadaliniai = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThingsKelininkPadaliniai = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThingsKMFilialo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
             this.tsbSimilar = new System.Windows.Forms.ToolStripButton();
@@ -107,6 +80,7 @@
             this.tsbFilterAddNeg = new System.Windows.Forms.ToolStripButton();
             this.tsbFilterByDate = new System.Windows.Forms.ToolStripButton();
             this.tsbFilterByMonth = new System.Windows.Forms.ToolStripButton();
+            this.tsbFilterThisYear = new System.Windows.Forms.ToolStripButton();
             this.tsbFilterDrop = new System.Windows.Forms.ToolStripButton();
             this.tsbFilterRemoveTail = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -114,7 +88,24 @@
             this.tsbAddOrderDesc = new System.Windows.Forms.ToolStripButton();
             this.tsbDropOrder = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tsbFilterThisYear = new System.Windows.Forms.ToolStripButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagalbinis = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.aktas_Nr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aktas_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pavadinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vardas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tikrin_defKodas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suvirintojo_vardas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aktas_arUzbaigtas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.aktas_trukumai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aktas_padalinysId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tikrin_operatoriusId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAktai)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -143,37 +134,38 @@
             this.aktas_Nr,
             this.aktas_data,
             this.pavadinimas,
-            this.k11,
-            this.k12,
-            this.k21,
-            this.k22,
-            this.k23,
-            this.k24,
-            this.k31,
-            this.k32,
-            this.k41,
-            this.k42,
-            this.k51,
+            this.k1,
+            this.k2,
+            this.k3,
+            this.k4,
+            this.k5,
+            this.k6,
             this.vardas,
-            this.tikrin_arDefektas,
             this.tikrin_defKodas,
-            this.begio_tipas,
             this.suvirintojo_vardas,
             this.aktas_arUzbaigtas,
             this.aktas_trukumai,
             this.aktas_padalinysId,
             this.tikrin_operatoriusId});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAktai.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAktai.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvAktai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAktai.Location = new System.Drawing.Point(0, 74);
             this.dgvAktai.Name = "dgvAktai";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAktai.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvAktai.ShowCellToolTips = false;
             this.dgvAktai.Size = new System.Drawing.Size(1234, 228);
             this.dgvAktai.TabIndex = 1;
@@ -181,227 +173,6 @@
             this.dgvAktai.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAktai_CellMouseLeave);
             this.dgvAktai.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAktai_CellValueChanged);
             this.dgvAktai.SelectionChanged += new System.EventHandler(this.dgvAktai_SelectionChanged);
-            // 
-            // id
-            // 
-            this.id.FillWeight = 5F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 50;
-            // 
-            // pagalbinis
-            // 
-            this.pagalbinis.HeaderText = "Pagalbinis";
-            this.pagalbinis.Name = "pagalbinis";
-            // 
-            // aktas_Nr
-            // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.aktas_Nr.DefaultCellStyle = dataGridViewCellStyle3;
-            this.aktas_Nr.FillWeight = 7F;
-            this.aktas_Nr.HeaderText = "Akto Nr.";
-            this.aktas_Nr.Name = "aktas_Nr";
-            this.aktas_Nr.ReadOnly = true;
-            this.aktas_Nr.Width = 70;
-            // 
-            // aktas_data
-            // 
-            this.aktas_data.FillWeight = 9F;
-            this.aktas_data.HeaderText = "Akto data";
-            this.aktas_data.Name = "aktas_data";
-            this.aktas_data.ReadOnly = true;
-            this.aktas_data.Width = 90;
-            // 
-            // pavadinimas
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.pavadinimas.DefaultCellStyle = dataGridViewCellStyle4;
-            this.pavadinimas.DividerWidth = 2;
-            this.pavadinimas.FillWeight = 30F;
-            this.pavadinimas.HeaderText = "Virino padalinys (rangovas)";
-            this.pavadinimas.Name = "pavadinimas";
-            this.pavadinimas.ReadOnly = true;
-            // 
-            // k11
-            // 
-            this.k11.FillWeight = 3F;
-            this.k11.HeaderText = "1.1";
-            this.k11.Name = "k11";
-            this.k11.ReadOnly = true;
-            this.k11.Width = 30;
-            // 
-            // k12
-            // 
-            this.k12.DividerWidth = 2;
-            this.k12.FillWeight = 3F;
-            this.k12.HeaderText = "1.2";
-            this.k12.Name = "k12";
-            this.k12.ReadOnly = true;
-            this.k12.Width = 30;
-            // 
-            // k21
-            // 
-            this.k21.FillWeight = 3F;
-            this.k21.HeaderText = "2.1";
-            this.k21.Name = "k21";
-            this.k21.ReadOnly = true;
-            this.k21.Width = 30;
-            // 
-            // k22
-            // 
-            this.k22.FillWeight = 3F;
-            this.k22.HeaderText = "2.2";
-            this.k22.Name = "k22";
-            this.k22.ReadOnly = true;
-            this.k22.Width = 30;
-            // 
-            // k23
-            // 
-            this.k23.FillWeight = 3F;
-            this.k23.HeaderText = "2.3";
-            this.k23.Name = "k23";
-            this.k23.ReadOnly = true;
-            this.k23.Width = 30;
-            // 
-            // k24
-            // 
-            this.k24.DividerWidth = 2;
-            this.k24.FillWeight = 3F;
-            this.k24.HeaderText = "2.4";
-            this.k24.Name = "k24";
-            this.k24.ReadOnly = true;
-            this.k24.Width = 30;
-            // 
-            // k31
-            // 
-            this.k31.FillWeight = 3F;
-            this.k31.HeaderText = "3.1";
-            this.k31.Name = "k31";
-            this.k31.ReadOnly = true;
-            this.k31.Width = 30;
-            // 
-            // k32
-            // 
-            this.k32.DividerWidth = 2;
-            this.k32.FillWeight = 3F;
-            this.k32.HeaderText = "3.2";
-            this.k32.Name = "k32";
-            this.k32.ReadOnly = true;
-            this.k32.Width = 30;
-            // 
-            // k41
-            // 
-            this.k41.FillWeight = 3F;
-            this.k41.HeaderText = "4.1";
-            this.k41.Name = "k41";
-            this.k41.ReadOnly = true;
-            this.k41.Width = 30;
-            // 
-            // k42
-            // 
-            this.k42.DividerWidth = 2;
-            this.k42.FillWeight = 3F;
-            this.k42.HeaderText = "4.2";
-            this.k42.Name = "k42";
-            this.k42.ReadOnly = true;
-            this.k42.Width = 30;
-            // 
-            // k51
-            // 
-            this.k51.DividerWidth = 2;
-            this.k51.FillWeight = 3F;
-            this.k51.HeaderText = "5.1";
-            this.k51.Name = "k51";
-            this.k51.ReadOnly = true;
-            this.k51.Width = 30;
-            // 
-            // vardas
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.vardas.DefaultCellStyle = dataGridViewCellStyle5;
-            this.vardas.FillWeight = 15F;
-            this.vardas.HeaderText = "Operatorius";
-            this.vardas.Name = "vardas";
-            this.vardas.ReadOnly = true;
-            this.vardas.Width = 120;
-            // 
-            // tikrin_arDefektas
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.NullValue = false;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tikrin_arDefektas.DefaultCellStyle = dataGridViewCellStyle6;
-            this.tikrin_arDefektas.FillWeight = 5F;
-            this.tikrin_arDefektas.HeaderText = "Defektas?";
-            this.tikrin_arDefektas.Name = "tikrin_arDefektas";
-            this.tikrin_arDefektas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tikrin_arDefektas.Width = 70;
-            // 
-            // tikrin_defKodas
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tikrin_defKodas.DefaultCellStyle = dataGridViewCellStyle7;
-            this.tikrin_defKodas.FillWeight = 10F;
-            this.tikrin_defKodas.HeaderText = "Defekto kodas";
-            this.tikrin_defKodas.Name = "tikrin_defKodas";
-            this.tikrin_defKodas.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // begio_tipas
-            // 
-            this.begio_tipas.DataPropertyName = "begio_tipas";
-            this.begio_tipas.HeaderText = "Begio Tipas";
-            this.begio_tipas.Name = "begio_tipas";
-            this.begio_tipas.ReadOnly = true;
-            this.begio_tipas.Visible = false;
-            // 
-            // suvirintojo_vardas
-            // 
-            this.suvirintojo_vardas.DataPropertyName = "suvirintojo_vardas";
-            this.suvirintojo_vardas.HeaderText = "Suvirintojo vardas";
-            this.suvirintojo_vardas.Name = "suvirintojo_vardas";
-            this.suvirintojo_vardas.ReadOnly = true;
-            this.suvirintojo_vardas.Visible = false;
-            // 
-            // aktas_arUzbaigtas
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle8.NullValue = false;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.aktas_arUzbaigtas.DefaultCellStyle = dataGridViewCellStyle8;
-            this.aktas_arUzbaigtas.FillWeight = 5F;
-            this.aktas_arUzbaigtas.HeaderText = "Aktas užbaigtas";
-            this.aktas_arUzbaigtas.Name = "aktas_arUzbaigtas";
-            this.aktas_arUzbaigtas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.aktas_arUzbaigtas.Width = 70;
-            // 
-            // aktas_trukumai
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.aktas_trukumai.DefaultCellStyle = dataGridViewCellStyle9;
-            this.aktas_trukumai.HeaderText = "Akto trūkumai";
-            this.aktas_trukumai.Name = "aktas_trukumai";
-            // 
-            // aktas_padalinysId
-            // 
-            this.aktas_padalinysId.HeaderText = "aktas_padalinysId";
-            this.aktas_padalinysId.Name = "aktas_padalinysId";
-            this.aktas_padalinysId.ReadOnly = true;
-            this.aktas_padalinysId.Visible = false;
-            // 
-            // tikrin_operatoriusId
-            // 
-            this.tikrin_operatoriusId.HeaderText = "tikrin_operatoriusId";
-            this.tikrin_operatoriusId.Name = "tikrin_operatoriusId";
-            this.tikrin_operatoriusId.ReadOnly = true;
-            this.tikrin_operatoriusId.Visible = false;
             // 
             // menuStrip1
             // 
@@ -418,8 +189,6 @@
             // 
             this.tsmiFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFileClose,
-            this.tsmiGamintiAktusDoc,
-            this.tsmiMAtaskaita,
             this.tsmiImport,
             this.tsmiExportSelectedRows,
             this.tsmiExportPresentedRows,
@@ -436,20 +205,6 @@
             this.tsmiFileClose.Size = new System.Drawing.Size(231, 22);
             this.tsmiFileClose.Text = "&Išeiti";
             this.tsmiFileClose.Click += new System.EventHandler(this.tsmiFileClose_Click);
-            // 
-            // tsmiGamintiAktusDoc
-            // 
-            this.tsmiGamintiAktusDoc.Name = "tsmiGamintiAktusDoc";
-            this.tsmiGamintiAktusDoc.Size = new System.Drawing.Size(231, 22);
-            this.tsmiGamintiAktusDoc.Text = "Gaminti aktų failus doc...";
-            this.tsmiGamintiAktusDoc.Click += new System.EventHandler(this.tsmiGamintiAktusDoc_Click);
-            // 
-            // tsmiMAtaskaita
-            // 
-            this.tsmiMAtaskaita.Name = "tsmiMAtaskaita";
-            this.tsmiMAtaskaita.Size = new System.Drawing.Size(231, 22);
-            this.tsmiMAtaskaita.Text = "Mėnesio ataskaita...";
-            this.tsmiMAtaskaita.Click += new System.EventHandler(this.tsmiMAtaskaita_Click);
             // 
             // tsmiImport
             // 
@@ -476,15 +231,11 @@
             // 
             this.tsmiCheckSelectedRows.Name = "tsmiCheckSelectedRows";
             this.tsmiCheckSelectedRows.Size = new System.Drawing.Size(231, 22);
-            this.tsmiCheckSelectedRows.Text = "Patikrinti parinktas eilutes";
-            this.tsmiCheckSelectedRows.Click += new System.EventHandler(this.tsmiCheckSelectedRows_Click);
             // 
             // tsmiCheckExposedRows
             // 
             this.tsmiCheckExposedRows.Name = "tsmiCheckExposedRows";
             this.tsmiCheckExposedRows.Size = new System.Drawing.Size(231, 22);
-            this.tsmiCheckExposedRows.Text = "Patikrinti rodomas eilutes";
-            this.tsmiCheckExposedRows.Click += new System.EventHandler(this.tsmiCheckExposedRows_Click);
             // 
             // tsmiThings
             // 
@@ -492,13 +243,7 @@
             this.tsmiThingsPadaliniai,
             this.tsmiThingsOperatoriai,
             this.tsmiThingsDefektoskopai,
-            this.tsmiThingsBegiuTipai,
-            this.tsmiThingsSuvirintojai,
-            this.tsmiThingsDarbuVadovai,
-            this.tsmiThingsMisiniai,
-            this.tsmiThingsSuvirPadaliniai,
-            this.tsmiThingsKelininkPadaliniai,
-            this.tsmiThingsKMFilialo});
+            this.tsmiThingsSuvirintojai});
             this.tsmiThings.Name = "tsmiThings";
             this.tsmiThings.Size = new System.Drawing.Size(57, 20);
             this.tsmiThings.Text = "&Dalykai";
@@ -506,72 +251,30 @@
             // tsmiThingsPadaliniai
             // 
             this.tsmiThingsPadaliniai.Name = "tsmiThingsPadaliniai";
-            this.tsmiThingsPadaliniai.Size = new System.Drawing.Size(194, 22);
+            this.tsmiThingsPadaliniai.Size = new System.Drawing.Size(185, 22);
             this.tsmiThingsPadaliniai.Text = "&Padaliniai/rangovai...";
             this.tsmiThingsPadaliniai.Click += new System.EventHandler(this.tsmiPadaliniai_Click);
             // 
             // tsmiThingsOperatoriai
             // 
             this.tsmiThingsOperatoriai.Name = "tsmiThingsOperatoriai";
-            this.tsmiThingsOperatoriai.Size = new System.Drawing.Size(194, 22);
+            this.tsmiThingsOperatoriai.Size = new System.Drawing.Size(185, 22);
             this.tsmiThingsOperatoriai.Text = "&Operatoriai...";
             this.tsmiThingsOperatoriai.Click += new System.EventHandler(this.tsmiOperatoriai_Click);
             // 
             // tsmiThingsDefektoskopai
             // 
             this.tsmiThingsDefektoskopai.Name = "tsmiThingsDefektoskopai";
-            this.tsmiThingsDefektoskopai.Size = new System.Drawing.Size(194, 22);
+            this.tsmiThingsDefektoskopai.Size = new System.Drawing.Size(185, 22);
             this.tsmiThingsDefektoskopai.Text = "&Defektoskopai...";
             this.tsmiThingsDefektoskopai.Click += new System.EventHandler(this.tsmiDefektoskopai_Click);
-            // 
-            // tsmiThingsBegiuTipai
-            // 
-            this.tsmiThingsBegiuTipai.Name = "tsmiThingsBegiuTipai";
-            this.tsmiThingsBegiuTipai.Size = new System.Drawing.Size(194, 22);
-            this.tsmiThingsBegiuTipai.Text = "&Bėgių tipai...";
-            this.tsmiThingsBegiuTipai.Click += new System.EventHandler(this.tsmiBegiuTipai_Click);
             // 
             // tsmiThingsSuvirintojai
             // 
             this.tsmiThingsSuvirintojai.Name = "tsmiThingsSuvirintojai";
-            this.tsmiThingsSuvirintojai.Size = new System.Drawing.Size(194, 22);
+            this.tsmiThingsSuvirintojai.Size = new System.Drawing.Size(185, 22);
             this.tsmiThingsSuvirintojai.Text = "&Suvirintojai...";
             this.tsmiThingsSuvirintojai.Click += new System.EventHandler(this.tsmiSuvirintojai_Click);
-            // 
-            // tsmiThingsDarbuVadovai
-            // 
-            this.tsmiThingsDarbuVadovai.Name = "tsmiThingsDarbuVadovai";
-            this.tsmiThingsDarbuVadovai.Size = new System.Drawing.Size(194, 22);
-            this.tsmiThingsDarbuVadovai.Text = "Darbų &vadovai...";
-            this.tsmiThingsDarbuVadovai.Click += new System.EventHandler(this.tsmiDarbuVadovai_Click);
-            // 
-            // tsmiThingsMisiniai
-            // 
-            this.tsmiThingsMisiniai.Name = "tsmiThingsMisiniai";
-            this.tsmiThingsMisiniai.Size = new System.Drawing.Size(194, 22);
-            this.tsmiThingsMisiniai.Text = "Suvirinimo &mišiniai...";
-            this.tsmiThingsMisiniai.Click += new System.EventHandler(this.tsmiMisiniai_Click);
-            // 
-            // tsmiThingsSuvirPadaliniai
-            // 
-            this.tsmiThingsSuvirPadaliniai.Name = "tsmiThingsSuvirPadaliniai";
-            this.tsmiThingsSuvirPadaliniai.Size = new System.Drawing.Size(194, 22);
-            this.tsmiThingsSuvirPadaliniai.Text = "Suvirintojų padaliniai...";
-            this.tsmiThingsSuvirPadaliniai.Click += new System.EventHandler(this.tsmiThingsSuvirPadaliniai_Click);
-            // 
-            // tsmiThingsKelininkPadaliniai
-            // 
-            this.tsmiThingsKelininkPadaliniai.Name = "tsmiThingsKelininkPadaliniai";
-            this.tsmiThingsKelininkPadaliniai.Size = new System.Drawing.Size(194, 22);
-            this.tsmiThingsKelininkPadaliniai.Text = "Kelininkų padaliniai...";
-            this.tsmiThingsKelininkPadaliniai.Click += new System.EventHandler(this.tsmiThingsKelininkPadaliniai_Click);
-            // 
-            // tsmiThingsKMFilialo
-            // 
-            this.tsmiThingsKMFilialo.Name = "tsmiThingsKMFilialo";
-            this.tsmiThingsKMFilialo.Size = new System.Drawing.Size(194, 22);
-            this.tsmiThingsKMFilialo.Text = "Filialo kelio meistrai...";
-            this.tsmiThingsKMFilialo.Click += new System.EventHandler(this.tsmiThingsKMFilialo_Click);
             // 
             // toolStrip1
             // 
@@ -763,6 +466,15 @@
             this.tsbFilterByMonth.Text = "Filtruoti pagal mėnesį";
             this.tsbFilterByMonth.Click += new System.EventHandler(this.tsbFilterByMonth_Click);
             // 
+            // tsbFilterThisYear
+            // 
+            this.tsbFilterThisYear.Image = ((System.Drawing.Image)(resources.GetObject("tsbFilterThisYear.Image")));
+            this.tsbFilterThisYear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFilterThisYear.Name = "tsbFilterThisYear";
+            this.tsbFilterThisYear.Size = new System.Drawing.Size(117, 22);
+            this.tsbFilterThisYear.Text = "Filtruoti šių metų";
+            this.tsbFilterThisYear.Click += new System.EventHandler(this.tsbFilterThisYear_Click);
+            // 
             // tsbFilterDrop
             // 
             this.tsbFilterDrop.Image = global::SuvirinimaiApp.Properties.Resources.filter_drop;
@@ -825,14 +537,174 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ReshowDelay = 5000;
             // 
-            // tsbFilterThisYear
+            // id
             // 
-            this.tsbFilterThisYear.Image = ((System.Drawing.Image)(resources.GetObject("tsbFilterThisYear.Image")));
-            this.tsbFilterThisYear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbFilterThisYear.Name = "tsbFilterThisYear";
-            this.tsbFilterThisYear.Size = new System.Drawing.Size(117, 22);
-            this.tsbFilterThisYear.Text = "Filtruoti šių metų";
-            this.tsbFilterThisYear.Click += new System.EventHandler(this.tsbFilterThisYear_Click);
+            this.id.FillWeight = 5F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // pagalbinis
+            // 
+            this.pagalbinis.HeaderText = "Pagalbinis";
+            this.pagalbinis.Name = "pagalbinis";
+            // 
+            // aktas_Nr
+            // 
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.aktas_Nr.DefaultCellStyle = dataGridViewCellStyle3;
+            this.aktas_Nr.FillWeight = 7F;
+            this.aktas_Nr.HeaderText = "Akto Nr.";
+            this.aktas_Nr.Name = "aktas_Nr";
+            this.aktas_Nr.ReadOnly = true;
+            this.aktas_Nr.Width = 70;
+            // 
+            // aktas_data
+            // 
+            this.aktas_data.FillWeight = 9F;
+            this.aktas_data.HeaderText = "Akto data";
+            this.aktas_data.Name = "aktas_data";
+            this.aktas_data.ReadOnly = true;
+            this.aktas_data.Width = 90;
+            // 
+            // pavadinimas
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.pavadinimas.DefaultCellStyle = dataGridViewCellStyle4;
+            this.pavadinimas.DividerWidth = 2;
+            this.pavadinimas.FillWeight = 30F;
+            this.pavadinimas.HeaderText = "Virino subjektas";
+            this.pavadinimas.Name = "pavadinimas";
+            this.pavadinimas.ReadOnly = true;
+            // 
+            // k1
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.k1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.k1.FillWeight = 3F;
+            this.k1.HeaderText = "1";
+            this.k1.Name = "k1";
+            this.k1.ReadOnly = true;
+            this.k1.Width = 40;
+            // 
+            // k2
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.k2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.k2.FillWeight = 3F;
+            this.k2.HeaderText = "2";
+            this.k2.Name = "k2";
+            this.k2.ReadOnly = true;
+            this.k2.Width = 40;
+            // 
+            // k3
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.k3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.k3.FillWeight = 3F;
+            this.k3.HeaderText = "3";
+            this.k3.Name = "k3";
+            this.k3.ReadOnly = true;
+            this.k3.Width = 40;
+            // 
+            // k4
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.k4.DefaultCellStyle = dataGridViewCellStyle8;
+            this.k4.FillWeight = 3F;
+            this.k4.HeaderText = "4";
+            this.k4.Name = "k4";
+            this.k4.ReadOnly = true;
+            this.k4.Width = 40;
+            // 
+            // k5
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.k5.DefaultCellStyle = dataGridViewCellStyle9;
+            this.k5.FillWeight = 3F;
+            this.k5.HeaderText = "5";
+            this.k5.Name = "k5";
+            this.k5.ReadOnly = true;
+            this.k5.Width = 40;
+            // 
+            // k6
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.k6.DefaultCellStyle = dataGridViewCellStyle10;
+            this.k6.DividerWidth = 2;
+            this.k6.FillWeight = 3F;
+            this.k6.HeaderText = "6";
+            this.k6.Name = "k6";
+            this.k6.ReadOnly = true;
+            this.k6.Width = 40;
+            // 
+            // vardas
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.vardas.DefaultCellStyle = dataGridViewCellStyle11;
+            this.vardas.FillWeight = 15F;
+            this.vardas.HeaderText = "Operatorius";
+            this.vardas.Name = "vardas";
+            this.vardas.ReadOnly = true;
+            this.vardas.Width = 120;
+            // 
+            // tikrin_defKodas
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.tikrin_defKodas.DefaultCellStyle = dataGridViewCellStyle12;
+            this.tikrin_defKodas.FillWeight = 10F;
+            this.tikrin_defKodas.HeaderText = "Defekto kodas";
+            this.tikrin_defKodas.Name = "tikrin_defKodas";
+            this.tikrin_defKodas.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // suvirintojo_vardas
+            // 
+            this.suvirintojo_vardas.DataPropertyName = "suvirintojo_vardas";
+            this.suvirintojo_vardas.HeaderText = "Suvirintojo vardas";
+            this.suvirintojo_vardas.Name = "suvirintojo_vardas";
+            this.suvirintojo_vardas.ReadOnly = true;
+            this.suvirintojo_vardas.Visible = false;
+            // 
+            // aktas_arUzbaigtas
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.NullValue = false;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.aktas_arUzbaigtas.DefaultCellStyle = dataGridViewCellStyle13;
+            this.aktas_arUzbaigtas.FillWeight = 5F;
+            this.aktas_arUzbaigtas.HeaderText = "Aktas užbaigtas";
+            this.aktas_arUzbaigtas.Name = "aktas_arUzbaigtas";
+            this.aktas_arUzbaigtas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.aktas_arUzbaigtas.Width = 70;
+            // 
+            // aktas_trukumai
+            // 
+            this.aktas_trukumai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.aktas_trukumai.DefaultCellStyle = dataGridViewCellStyle14;
+            this.aktas_trukumai.HeaderText = "Akto trūkumai";
+            this.aktas_trukumai.Name = "aktas_trukumai";
+            // 
+            // aktas_padalinysId
+            // 
+            this.aktas_padalinysId.HeaderText = "aktas_padalinysId";
+            this.aktas_padalinysId.Name = "aktas_padalinysId";
+            this.aktas_padalinysId.ReadOnly = true;
+            this.aktas_padalinysId.Visible = false;
+            // 
+            // tikrin_operatoriusId
+            // 
+            this.tikrin_operatoriusId.HeaderText = "tikrin_operatoriusId";
+            this.tikrin_operatoriusId.Name = "tikrin_operatoriusId";
+            this.tikrin_operatoriusId.ReadOnly = true;
+            this.tikrin_operatoriusId.Visible = false;
             // 
             // fAktai
             // 
@@ -876,10 +748,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiThingsPadaliniai;
         private System.Windows.Forms.ToolStripMenuItem tsmiThingsOperatoriai;
         private System.Windows.Forms.ToolStripMenuItem tsmiThingsDefektoskopai;
-        private System.Windows.Forms.ToolStripMenuItem tsmiThingsBegiuTipai;
         private System.Windows.Forms.ToolStripMenuItem tsmiThingsSuvirintojai;
-        private System.Windows.Forms.ToolStripMenuItem tsmiThingsDarbuVadovai;
-        private System.Windows.Forms.ToolStripMenuItem tsmiThingsMisiniai;
         private System.Windows.Forms.ToolStripButton tsbNew;
         private System.Windows.Forms.ToolStripButton tsbSimilar;
         private System.Windows.Forms.ToolStripButton tsbEdit;
@@ -901,12 +770,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton tsbDeleteRecord;
         private System.Windows.Forms.ToolStripButton tsbFilterByDate;
-        private System.Windows.Forms.ToolStripMenuItem tsmiMAtaskaita;
-        private System.Windows.Forms.ToolStripMenuItem tsmiThingsSuvirPadaliniai;
-        private System.Windows.Forms.ToolStripMenuItem tsmiThingsKelininkPadaliniai;
         private System.Windows.Forms.ToolStripMenuItem tsmiImport;
-        private System.Windows.Forms.ToolStripMenuItem tsmiThingsKMFilialo;
-        private System.Windows.Forms.ToolStripMenuItem tsmiGamintiAktusDoc;
         private System.Windows.Forms.ToolStripProgressBar progressbar;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportSelectedRows;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportPresentedRows;
@@ -916,32 +780,25 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiCheckSelectedRows;
         private System.Windows.Forms.ToolStripMenuItem tsmiCheckExposedRows;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripButton tsbFilterThisYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewCheckBoxColumn pagalbinis;
         private System.Windows.Forms.DataGridViewTextBoxColumn aktas_Nr;
         private System.Windows.Forms.DataGridViewTextBoxColumn aktas_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn pavadinimas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn k51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn k1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn k2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn k3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn k4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn k5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn k6;
         private System.Windows.Forms.DataGridViewTextBoxColumn vardas;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn tikrin_arDefektas;
         private System.Windows.Forms.DataGridViewTextBoxColumn tikrin_defKodas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn begio_tipas;
         private System.Windows.Forms.DataGridViewTextBoxColumn suvirintojo_vardas;
         private System.Windows.Forms.DataGridViewCheckBoxColumn aktas_arUzbaigtas;
         private System.Windows.Forms.DataGridViewTextBoxColumn aktas_trukumai;
         private System.Windows.Forms.DataGridViewTextBoxColumn aktas_padalinysId;
         private System.Windows.Forms.DataGridViewTextBoxColumn tikrin_operatoriusId;
-        private System.Windows.Forms.ToolStripButton tsbFilterThisYear;
     }
 }
 

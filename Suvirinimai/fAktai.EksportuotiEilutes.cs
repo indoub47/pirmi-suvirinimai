@@ -54,61 +54,26 @@ namespace SuvirinimaiApp
 Aktai.id AS Akto_ID, 
 Aktai.aktas_Nr AS Akto_Nr, 
 Aktai.aktas_data AS Akto_Data,
-Aktai.k11 & Aktai.k12 & '.' & Aktai.k21 & Aktai.k22 & Aktai.k23 & Aktai.k24 & '.' & Aktai.k31 & Aktai.k32 & '.' & Aktai.k41 & Aktai.k42 & '.' & Aktai.k51 AS Vietos_kodas,
+Aktai.k1 & '.' & Aktai.k2 & '.' & Aktai.k3 & '.' & Aktai.k4 & '.' & Aktai.k5 & '.' & Aktai.k6 AS Vietos_kodas,
 Padaliniai.pavadinimas AS Suvirinusio_padalinio_pavadinimas,
 Padaliniai.oficPavadinimas AS Suvirinusio_padalinio_pilnas_pavadinimas,
-Padaliniai.arRangovas AS Ar_suvirino_rangovas,
 Aktai.aktas_padalinysId AS Suvirinusio_padalinio_ID,
 Suvirintojai.vardas AS Suvirintojo_vardas,
-Suvirintojai.pazymNr AS Suvirintojo_pažymėjimo_Nr,
 Aktai.suvirint_suvirintojasId AS Suvirintojo_ID,
-PadaliniaiSuvirintoju.pavadinimas AS Suvirintojo_padalinio_pavadinimas,
-PadaliniaiSuvirintoju.oficPavadinimas AS Suvirintojo_padalinio_oficialus_pavadinimas, 
-Aktai.suvirint_padalinysId AS Suvirintojo_įmonės_arba_padalinio_ID, 
-Vadovai.vardas AS Suvirinimo_vietą_sutvarkiusios_brigados_vadovo_vardas,
-Vadovai.pareigos AS Suvirinimo_vietą_sutvarkiusios_brigados_vadovo_pareigos,
-Aktai.sutvark_vadovasId AS Suvirinimo_vietą_sutvarkiusios_brigados_vadovo_ID,
-PadaliniaiKelininku.pavadinimas AS Suvirinimo_vietą_sutvarkiusios_brigados_pavadinimas,
-PadaliniaiKelininku.oficPavadinimas AS Suvirinimo_vietą_sutvarkiusios_brigados_oficialus_pavadinimas,
-Aktai.sutvark_padalinysId AS Suvirinimo_vietą_sutvarkiusios_brigados_ID, 
 Operatoriai.vardas AS Operatoriaus_vardas,
 Aktai.tikrin_operatoriusId AS Operatoriaus_kodas,
 Aktai.tikrin_defektoskopasId AS Defektoskopo_kodas, 
 Defektoskopai.gamyklNr AS Defektoskopo_gamyklinis_Nr,
 Defektoskopai.tipas AS Defektoskopo_tipas,
-BegiuTipai.pavadinimas AS Bėgio_tipas,
-Aktai.begis_tipasID AS Bėgio_tipo_ID,
-Aktai.begis_protarpisMm AS Protarpis_mm,
-Aktai.medz_formaGamMetai AS Suvirinimo_formos_gam_metai, 
-Aktai.medz_misinGamMetai AS Suvirinimo_mišinio_gam_metai, 
-Aktai.medz_misinKodasId AS Suvirinimo_mišinio_ID,
-Misiniai.pavadinimas AS Suvirinimo_mišinio_pavadinimas, 
-Aktai.medz_misinPartNr AS Suvirinimo_mišinio_partijos_Nr, 
-Aktai.medz_misinPorcNr AS Suvirinimo_mišinio_porcijos_Nr, 
-Aktai.salyg_arSausa AS Ar_sausa, 
-Aktai.salyg_oroTemp AS Oro_temperatūra, 
-Aktai.salyg_begioTemp AS Bėgio_temperatūra, 
-Aktai.tikrin_nelygumaiVirsausMm AS Suvirintos_vietos_viršaus_nelygumai_mm, 
-Aktai.tikrin_nelygumaiSonoMm AS Suvirintos_vietos_šono_nelygumai_mm,
-Aktai.tikrin_arDefektas AS Ar_nustatytas_defektas, 
 Aktai.tikrin_defKodas AS Defekto_kodas, 
 Aktai.tikrin_sanduruCharakter AS Suvirinimo_sandūros_charakteristika, 
 Aktai.aktas_arUzbaigtas AS Ar_aktas_užbaigtas, 
-Aktai.aktas_trukumai AS Akto_trūkumai,
-Aktai.aktas_pasiraseKMId AS Pasirašiusio_filialo_KM_ID,
-KMFilialo.vardas AS Filialo_KM_vardas,
-KMFilialo.meistrija AS Filialo_meistrija
-FROM ((((((((((Aktai 
+Aktai.aktas_trukumai AS Akto_trūkumai
+FROM ((((Aktai 
 LEFT JOIN Padaliniai ON Aktai.aktas_padalinysId = Padaliniai.id)
 LEFT JOIN Suvirintojai ON Aktai.suvirint_suvirintojasId = Suvirintojai.id)
-LEFT JOIN PadaliniaiSuvirintoju ON Aktai.suvirint_padalinysId = PadaliniaiSuvirintoju.id)
-LEFT JOIN Vadovai ON Aktai.sutvark_vadovasId = Vadovai.id)
-LEFT JOIN PadaliniaiKelininku ON Aktai.sutvark_padalinysId = PadaliniaiKelininku.id)
 LEFT JOIN Operatoriai ON Aktai.tikrin_operatoriusID = Operatoriai.id)
-LEFT JOIN Defektoskopai ON Aktai.tikrin_defektoskopasID = Defektoskopai.id)
-LEFT JOIN BegiuTipai ON Aktai.begis_tipasID = BegiuTipai.id)
-LEFT JOIN Misiniai ON Aktai.medz_misinKodasId = Misiniai.id)
-LEFT JOIN KMFilialo ON Aktai.aktas_pasiraseKMId = KMFilialo.id)";
+LEFT JOIN Defektoskopai ON Aktai.tikrin_defektoskopasID = Defektoskopai.id)";
             try
             {
                 // tblExport = DbHelper.FillDataTable("SELECT * FROM Aktai WHERE " + where);    

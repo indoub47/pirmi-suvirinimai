@@ -75,26 +75,18 @@ namespace SuvirinimaiApp
             string columnName = dgvAktai.Columns[cl.ColumnIndex].Name;
             switch (columnName)
             {
-                case "k11":
-                case "k12":
-                case "k21":
-                case "k22":
-                case "k23":
-                case "k24":
-                case "k31":
-                case "k32":
-                case "k41":
-                case "k42":
-                case "k51":
-                    return makeFilterString(columnName, cl.Value, ColumnType.intg);
-
+                case "k1":
+                case "k2":
+                case "k3":
+                case "k4":
+                case "k5":
+                case "k6":
                 case "aktas_Nr":
                 case "tikrin_defKodas":
                 case "aktas_trukumai":
                 case "vieta":
                     return makeFilterString(columnName, cl.Value, ColumnType.text);
-
-                case "tikrin_arDefektas":
+                    
                 case "aktas_arUzbaigtas":
                     return makeFilterString(columnName, cl.Value, ColumnType.booln);
 
@@ -119,9 +111,6 @@ namespace SuvirinimaiApp
 
             switch (type)
             {
-                case ColumnType.intg:
-                    return string.Format("{0}={1}", parameterName, cellValue.ToString());
-
                 case ColumnType.date:
                     return string.Format("{0}={1}", parameterName, DbHelper.FormatDateValue(cellValue));
 

@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -42,7 +42,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -56,6 +56,24 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>SuvirinimaiApp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DbHelper">
@@ -81,9 +99,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fAktai.PatikrintiEilutes.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="fMonth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +106,6 @@
       <DependentUpon>fMonth.cs</DependentUpon>
     </Compile>
     <Compile Include="fAktai.SomeClassesAndStructs.cs" />
-    <Compile Include="fAktai.KurtiAtaskaita.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="fAktai.DalykuTvarkymas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +115,7 @@
     <Compile Include="fAktai.FiltravimasRikiavimas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AtaskaitosEilute.cs" />
     <Compile Include="fAktai.VienasAktas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAktai.GamintiAktusDoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fEditText.cs">
@@ -169,19 +177,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TvarkytiBegiuTipai.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TvarkytiDefektoskopai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TvarkytiKelininkuPadaliniai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TvarkytiKMFilialo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TvarkytiMisiniai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TvarkytiOperatoriai.cs">
@@ -191,12 +187,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TvarkytiSuvirintojai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TvarkytiSuvirintojuPadaliniai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TvarkytiVadovai.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="fMonth.resx">

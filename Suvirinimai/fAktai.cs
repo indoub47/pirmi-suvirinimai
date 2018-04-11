@@ -95,15 +95,12 @@ namespace SuvirinimaiApp
 
             string sql = @"SELECT
                                 Aktai.id, Aktai.aktas_Nr, Aktai.aktas_data, Aktai.aktas_arUzbaigtas, Aktai.aktas_trukumai, 
-                                Padaliniai.pavadinimas, Aktai.aktas_padalinysId, 
-                                BegiuTipai.pavadinimas AS begio_tipas, Suvirintojai.vardas AS suvirintojo_vardas, 
-                                Aktai.k11, Aktai.k12, Aktai.k21, Aktai.k22, Aktai.k23, Aktai.k24, Aktai.k31, Aktai.k32, Aktai.k41, Aktai.k42, Aktai.k51, 
-                                Operatoriai.vardas, 
-                                Aktai.tikrin_arDefektas, Aktai.tikrin_defKodas, Aktai.tikrin_operatoriusId 
+                                Padaliniai.pavadinimas, Aktai.aktas_padalinysId, Suvirintojai.vardas AS suvirintojo_vardas, 
+                                Aktai.k1, Aktai.k2, Aktai.k3, Aktai.k4, Aktai.k5, Aktai.k6,
+                                Operatoriai.vardas, Aktai.tikrin_defKodas, Aktai.tikrin_operatoriusId 
                             FROM 
-                                (((Aktai LEFT JOIN Padaliniai ON Aktai.aktas_padalinysId = Padaliniai.id) 
+                                ((Aktai LEFT JOIN Padaliniai ON Aktai.aktas_padalinysId = Padaliniai.id) 
                                 LEFT JOIN Operatoriai ON Aktai.tikrin_operatoriusId = Operatoriai.id)
-                                LEFT JOIN BegiuTipai ON Aktai.begis_tipasId = BegiuTipai.id) 
                                 LEFT JOIN Suvirintojai ON Aktai.suvirint_suvirintojasId = Suvirintojai.id
                             ORDER BY Aktai.id DESC;";
 
@@ -311,7 +308,6 @@ namespace SuvirinimaiApp
         private void buildUpdateCommand()
         {
             StringBuilder updSql = new StringBuilder("UPDATE Aktai SET ");
-            updSql.Append("tikrin_arDefektas=@tikrin_arDefektas, ");
             updSql.Append("tikrin_defKodas=@tikrin_defKodas, ");
             updSql.Append("aktas_trukumai=@aktas_trukumai, ");
             updSql.Append("aktas_arUzbaigtas=@aktas_arUzbaigtas ");
@@ -323,7 +319,6 @@ namespace SuvirinimaiApp
             QueryParam[] parametrai = {new QueryParam("@tikrin_arDefektas", "tikrin_arDefektas", DbType.Boolean),
                                       new QueryParam("@tikrin_defKodas", "tikrin_defKodas", DbType.String),
                                       new QueryParam("@aktas_trukumai", "aktas_trukumai", DbType.String),
-                                      new QueryParam("@aktas_arUzbaigtas", "aktas_arUzbaigtas", DbType.Boolean),
                                       new QueryParam("@id", "id", DbType.Int32)};
             DbParameter p;
             foreach (QueryParam parametras in parametrai)
